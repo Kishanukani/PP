@@ -1,0 +1,133 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload Resume</title>
+  </head>
+  <body>
+    <h1>Upload your Resume</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="uploadresume" />
+      <button type="submit">Upload</button>
+    </form>
+
+    {% if resume_uploaded %}
+    <p>Resume uploaded successfully</p>
+    {% endif %}
+
+    <h2>Template Resumes</h2>
+    <ul>
+      <li>
+        <a href="#">Download Resume 1</a>
+      </li>
+      <li>
+        <a href="#">Download Resume 2</a>
+      </li>
+    </ul>
+  </body>
+</html> {% endcomment %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload Resume</title>
+  </head>
+  <body>
+    <h1>Upload your Resume</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="uploadresume" />
+      <button type="submit">Upload</button>
+    </form>
+
+    {% if resume_uploaded %}
+    <p>Resume uploaded successfully</p>
+    {% endif %}
+
+    <h2>Template Resumes</h2>
+    <ul>
+      <li>
+        <a href="#">Download Resume 1</a>
+      </li>
+      <li>
+        <a href="#">Download Resume 2</a>
+      </li>
+    </ul>
+  </body>
+</html>
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static '/style.css' %}" />
+
+    {% comment %}
+    <link rel="stylesheet" href="{%static 'resume.css'%}" />
+    {% endcomment %}
+  </head>
+
+  <body>
+    <nav class="nav1">
+      <!-- <ul></ul> -->
+      <div id="logo">Logo</div>
+      <ul>
+        <li>
+          <a href="{% url 'index'%}"> Home </a>
+        </li>
+        <li><a href="#"> Services </a></li>
+        <li><a href="#"> About us </a></li>
+        <li><a href="#"> Devloper </a></li>
+      </ul>
+      <div id="login"><a href="{% url 'sign_up' %}">Login</a></div>
+      <!-- <div id="login"><a href="{% url 'sign_up' %}">Login</a></div> -->
+    </nav>
+    <div class="container">
+        <div class="uploadresume">
+            <!-- please upload at least one resume in order  -->
+            <div class="text">Please Upload At least one Resume </div>
+            <form action="upload_resume/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="uploadbtn"><input type="file" placeholder="Please Upload Your Resume">Upload</div>
+            <div class="decriptio"><select id="job-role">
+                    <option value="" disabled selected>Select a job role</option>
+                    <option value="software-engineer">Software Engineer</option>
+                    <option value="data-scientist">Data Scientist</option>
+                    <option value="project-manager">Project Manager</option>
+                    <!-- Add more options as needed -->
+                </select></textarea></div>
+            <div class="submitbtn"><button type="submit">Submit</button>
+            </form>
+              {% if resume_uploaded %}
+               <p>Resume uploaded successfully</p>
+              {% endif %}
+            </div>
+        </div>
+
+     {% comment %}
+      <!-- ---------------------------------------------------------------------------------------- -->
+      {% endcomment %}
+      
+
+      <div class="uploadresume">
+        <div class="text">click below to check the template resume</div>
+        <div class="tempimg">
+          <div class="overlappresume" id="one"></div>
+          <div class="overlappresume" id="two"></div>
+          <div class="overlappresume" id="three"></div>
+        </div>
+        <!-- <div class="checkresume"><input type="submit" value="">Check Resume</div> -->
+        <!-- <input type="submit"> -->
+        <div class="checkresume">
+          <button type="submit">check resume</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

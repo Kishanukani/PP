@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: bisque;
+}
+.nav1{
+    
+    background-color: green;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    /* justify-content: space-between; This property places the left and right content at the extremes */
+    /* align-items: center; */
+}
+.nav1 li{
+    display: inline;
+    padding:10px 50px ;
+    list-style: none;
+}
+
+
+.nav1 ul
+{
+    margin: 5px 0;
+}
+.nav1 a{
+    /* border: 2px solid black; */
+    text-decoration: none;
+    /* color: black; */
+    color: white;
+
+
+}
+.nav1 a:hover
+{
+    color: black;
+}
+/* .nav1 a:visited
+{
+    color: grey;
+}
+.nav1 a:active
+{
+    color:pink;
+} */
+
+#logo
+{
+    position: absolute;
+    /* border: 2px solid black; */
+    display: inline;
+    /* right: 0; */
+    left: 0;
+    /* margin-left: 10px; */
+    margin: 4px 50px;
+}
+
+#login
+{
+    position: absolute;
+    /* border: 2px solid black; */
+    display: inline;
+    right: 0;
+    margin: 4px 80px;
+
+}
+#nav2 {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    background-color: bisque;
+    color: black;
+    
+}
+
+#nav2 li{
+    border: 2px solid black;
+}
+#nav2 li:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.591);
+    cursor: pointer;
+    background-color: grey;
+    color: black;
+}
+#nav2 a{
+    color: black;
+
+}
+
+
+/* RESUME */
+/* /////////////////////////////////////////////////////////////////////////////////////////////// */
+.container{
+    display: flex;
+}
+
+.uploadresume{
+    border: 2px solid;
+    height: 400px;
+    width: 40%;
+    margin: 20px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 100px;
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+
+.uploadresume .text{
+    text-align: center;
+}
+
+/* .uploadbtn
+{
+    background-color: magenta;
+    height: 200px;
+    position: relative;
+    top: 20px;
+    margin: 0 50px;
+    width: 171px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    border-radius: 15px;
+} */
+.uploadbtn {
+    background-color: magenta;
+    height: 200px;
+    position: relative;
+    margin: 20px auto;
+    width: 171px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+.decriptio
+{
+    /* background-color: magenta; */
+    /* height: 200px; */
+    position: relative;
+    top: 20px;
+    margin: 0 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+#job-role {
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+#job-role option[disabled] {
+    color: #999; /* Placeholder text color */
+  }
+  
+  
+.submitbtn{
+    position: relative;
+    top: 40px;
+    margin: 0 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+button
+{
+    height: 30px;
+    width: 100px;
+}
+
+
+
+.tempimg
+{
+    border: 2px solid blue;
+    height: 70%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    /* flex-direction: ; */
+    justify-content: center;
+    align-items: center;
+    left: 150px;
+
+}
+
+
+.overlappresume{
+    background-color: magenta;
+    height: 200px;
+    width: 171px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    position:absolute;
+    top: 10px; 
+    /* left: px; */
+    right: 10px;
+    border: 2px solid black;
+}
+
+#one {
+    left: 10px;
+    background-color: red;
+
+}
+
+#two {
+    left: 25px; /* adjust this value to overlap */
+    background-color: white;
+    top: 20px;
+}
+
+#three {
+    left: 40px; 
+    top: 30px;/* adjust this value to overlap */
+}
+
+
+.checkresume
+{
+    padding: 10px;
+    position: relative;
+    top: 20px;
+    left: 200px;
+    /* display: inline; */
+    /* display: block; */
+}
+
+button{
+    /* color: pink; */
+    height: 40px;
+    width: 20%;
+}
+
+#op
+{
+    display: inline;
+    padding: 10px;
+}
