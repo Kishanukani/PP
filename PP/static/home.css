@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    position: relative;
+}
+
+.hanimation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: red;
+}
+
+nav:nth-child(1){
+    background-color: #838181;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logotext{
+    font-weight: 900;
+    font-size: 200%;
+}
+
+.hfrontpage{
+    height: 90%;
+    border: 2px solid red;    
+    display: flex;
+    background: rgb(8, 8, 8)
+}
+
+
+.hhero-section{
+    height: 100%;
+    width: 60%;
+    border: 2px solid blue;
+    /* background: rgb(175, 172, 172); */
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 0 5%;
+    /* justify-content: center; */
+}
+
+.resume-animation{
+    height: 100%;
+    width: 40%;
+    border: 2px solid green;
+    background: rgb(51, 45, 45);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hresume-images{
+    width: 50%;
+    height: 60%;
+    background: rgb(216, 210, 210);
+    position: absolute;
+    box-shadow: 10px 10px 10px 7px black;
+}
+.hresume-images:nth-child(2){
+    translate: 10px 10px;
+
+}
+.hresume-images:nth-child(3){
+    translate: 20px 20px;
+
+}
+.hresume-images:nth-child(4){
+    translate: 30px 30px;
+
+}
+
+/* Hero section----------- */
+
+.tagline{
+    color: aliceblue;
+    font-family: 'Oswald', sans-serif;
+    font-size: 370%;
+    padding: 10% 0;
+    position: relative;
+    transform: translateY(-35%);
+}
+
+.tagline-title{
+    position: absolute;
+    text-decoration: underline;
+}
+
+.tagline-title::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    background-color: rgb(8, 8, 8);
+    width: 0%;
+    height: 100%;
+    animation: title 3s ease-in-out alternate infinite;
+}
+
+.tagline-title:nth-child(2),.tagline-title:nth-child(3){
+    opacity: 0;
+}
+
+.tag-description{
+    margin-top: 5%;
+}
+
+.tagtext{
+    font-size: 120%;
+    padding-bottom: 1.5rem;
+    color: beige;
+    align-items: center;
+    margin-bottom: .5rem;
+    /* box-shadow: 0 0 2px 2px #0ff; */
+}
+
+.hsub-hero{
+    color: rgb(3, 255, 3);
+    font-size: 110%;
+}
+
+/*buttons*/
+
+.hbutton{
+    display: flex;
+    gap: 3rem;
+    /* margin-top: 5%; */
+}
+
+.hbuttons {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, border-color 0.4s;
+    transform: scale(1.2);
+  }
+  
+  .hbuttons:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0ff;
+    opacity: .5;
+    transition: left 0.4s;
+  }
+  
+  .hbuttons:hover {
+    
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px rgb(0, 255, 13), 0 0 50px rgb(0, 255, 13), 0 0 80px rgb(0, 255, 13);
+  }
+  
+  .hbuttons:hover:before {
+    left: 0;
+  }
+
+  .hbuttons > a{
+    color: antiquewhite;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .hbuttons > a:hover{
+    color: rgb(0, 255, 13);
+  }
+
+  
+  /* keyframe */
+
+  @keyframes title {
+    0%   {width: 0%;}
+    100%  {width: 100%;}
+    /* 100% {width: 0%;} */
+  }

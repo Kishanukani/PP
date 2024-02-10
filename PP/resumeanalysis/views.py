@@ -89,6 +89,13 @@ def resume_analysis(request):
                 "deep Learning",
                 "flask",
                 "streamlit",
+                "python",
+                "django",
+                "flask",
+                "numpy",
+                "matplotlib",
+                "seaborn",
+                "pandas",
             ]
             web_keyword = [
                 "react",
