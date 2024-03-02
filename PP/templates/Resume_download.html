@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume List</title>
+    <!-- <link rel="stylesheet" href="styles_RD.css"> -->
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/styles_RD.css' %}" />
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo">Neon Navbar</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="sbutton" width="100px"></div>
+    </nav>
+    </ul>
+
+    <div class="container">
+        <div id="particle-js"></div>
+        <!-- <div class="resume-grid">
+            <div class="resume-item">
+                <h2>John Doe</h2>
+                <p>Front-end Developer</p>
+                <a href="john_doe_resume.pdf" target="_blank">View Resume</a>
+            </div>
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div>
+
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div>
+
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div>
+
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div>
+
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div>
+
+            <div class="resume-item">
+                <h2>Jane Smith</h2>
+                <p>Graphic Designer</p>
+                <a href="" target="_blank">View Resume</a>
+            </div> -->
+        <div class="resume-grid">
+            {% for resume_file, resume_url in resume_files %}
+            <div class="resume-item">
+                <h2>{{ resume_file }}</h2>
+                <!-- Assuming each resume file has a unique name -->
+                <a href="{{ resume_url }}" target="_blank">View Resume</a>
+                <br>
+                <embed src="{{ resume_url }}" width="300px" height="100px" />
+
+                <!-- <img src="{{ preview_url }}" width="100px" height="100px" /> -->
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Add more resume items as needed -->
+    </div>
+    </div>
+    <!-- particle js -->
+    <script src="particles.js"></script>
+    <script src="myjs.js"></script>
+</body>
+
+</html>
