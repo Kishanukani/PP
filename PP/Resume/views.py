@@ -45,23 +45,50 @@ def upload_resume(request):
     return render(request, "Resume.html", context)
 
 
+# def list_resumes(request):
+#     # Assuming resumes are stored in a folder named 'templateresume' in Firebase Storage
+#     # Access Firebase Storage
+#     bucket = storage.bucket("resumedjango.appspot.com")
+
+#     # List all resume files in Firebase Storage
+#     blobs = bucket.list_blobs(
+#         prefix="templateresume/"
+#     )  # Assuming resumes are stored in a 'templateresume' folder
+#     resume_files = [blob.name for blob in blobs if blob.name.endswith(".pdf")]
+
+#     # Base URL for resume files
+#     base_url = "https://storage.googleapis.com/resumedjango.appspot.com/"
+
+#     # Generate URLs for resume files
+#     resume_urls = [base_url + file_name for file_name in resume_files]
+
+#     # Render a template with links to all resume files
+#     context = {"resume_files": zip(resume_files, resume_urls)}
+#     return render(request, "resume_list.html", context)
+
+
 def list_resumes(request):
     # Assuming resumes are stored in a folder named 'templateresume' in Firebase Storage
     # Access Firebase Storage
     bucket = storage.bucket("resumedjango.appspot.com")
 
     # List all resume files in Firebase Storage
-    blobs = bucket.list_blobs(
-        prefix="templateresume/"
-    )  # Assuming resumes are stored in a 'templateresume' folder
-    resume_files = [blob.name for blob in blobs if blob.name.endswith(".pdf")]
+    blobs = list(
+        bucket.list_blobs(prefix="templateresume/")
+    )  # Convert iterator to a list
+
+    # Extract file paths and names
+    resume_files_with_paths = [
+        blob.name for blob in blobs if blob.name.endswith(".pdf")
+    ]
+    resume_files = [file.split("/")[-1] for file in resume_files_with_paths]
 
     # Base URL for resume files
     base_url = "https://storage.googleapis.com/resumedjango.appspot.com/"
 
     # Generate URLs for resume files
-    resume_urls = [base_url + file_name for file_name in resume_files]
+    resume_urls = [base_url + file_path for file_path in resume_files_with_paths]
 
     # Render a template with links to all resume files
     context = {"resume_files": zip(resume_files, resume_urls)}
-    return render(request, "resume_list.html", context)
+    return render(request, "Resume_download.html", context)
