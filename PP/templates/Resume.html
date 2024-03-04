@@ -31,7 +31,7 @@
 
   <div class="container">
     <div class="uploadresume">
-      <div class="text">Please Upload At least one Resume</div>
+      <div class="text">Help others by providing your Resume</div>
       <form action="{% url 'upload_resume' %}" method="post" enctype="multipart/form-data">
         {% comment %} isem me atka tha yaha action me path dala hai jisse jab
         bhi ye form ka submit hoga ,the path will be the current location and
@@ -42,7 +42,7 @@
           <input type="file" name="uploadresume" id="uploadresume" style="width: 300px" class="custom-file-input" />
         </div>
         <div class="decriptio">
-          <select id="job-role">
+          <select id="job_role" name="job_role">
             <option value="" disabled selected>Select a job role</option>
             <option value="software-engineer">Software Engineer</option>
             <option value="data-scientist">Data Scientist</option>
@@ -54,12 +54,13 @@
       </form>
       <br />
       <br />
+      <br>
       {% if resume_uploaded %}
-      <h1 id="op">
+      <h1 class="op">
         <p>Resume uploaded successfully</p>
       </h1>
+
       <script>
-        // alert
         // Go back to the previous page after 3 seconds
         setTimeout(function () {
           alert("Resume uploaded successfully!");
@@ -67,6 +68,22 @@
         }, 10);
       </script>
 
+      {% elif error_message %}
+      <h1 class="op">
+        <p>{{ error_message }}</p>
+        <script>
+          // Go back to the previous page after 3 seconds
+          setTimeout(function () {
+            alert("{{error_message}}");
+            window.history.back();
+          }, 10);
+        </script>
+      </h1>
+
+      {% else %}
+      <!-- <h1 class="op">
+        <p>Resume upload failed</p>
+      </h1> -->
       {% endif %}
     </div>
 

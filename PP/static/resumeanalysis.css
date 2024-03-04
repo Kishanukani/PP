@@ -9,16 +9,25 @@ body{
 
 .child1
 {
+    /* height: 100%; */
     width: 50%;
-    border: 2px solid red;
+    padding: 0 10px;
+    /* border: 2px solid red; */
 
+}
+.child1 #pdfviewer {
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
 }
 
 /* resume analysis starts */
 .child2
 {
     width: 50%;
-    border: 2px solid pink;
+    height: auto;
+
+    /* border: 2px solid pink; */
+    padding: 0 10px;
 }
 
 
@@ -34,11 +43,32 @@ body{
     flex-wrap: wrap; /* Allows flex items to wrap to the next line if there's not enough space */
     row-gap: 6px; /* Adds vertical gap between flex items */
     column-gap: 8px; /* Adds horizontal gap between flex items */
-    border: 1px solid pink; /* Adds a pink border around the flex container */
+ 
 }
 
 
 span .skill 
 {
     border:1px solid white;
+}
+
+
+.child3
+{
+    /* border: 1px solid lime; */
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.resume_vid
+{
+    /* border: 3px solid yellow; */
+    text-align: center;
+}
+
+.interview_vid
+{
+    /* border: 3px solid red; */
+    text-align: center;
 }

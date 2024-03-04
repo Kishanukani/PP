@@ -2,9 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
-import firebase_admin
-from firebase_admin import credentials, storage
-from datetime import timedelta
+from firebase_admin import storage
 
 from django.urls import reverse
 from django.shortcuts import render, redirect
@@ -39,47 +37,76 @@ def Signup(request):
     return render(request, "sign_up.html")
 
 
+# def upload_resume(request):
+#     if request.method == "POST" and "uploadresume" in request.FILES:
+#         upload_resume = request.FILES["uploadresume"]
+#         # if request.method == "POST" and request.FILES["uploadresume"]:
+#         # upload_resume = request.FILES["uploadresume"]
+#         bucket = storage.bucket(settings.FIREBASE_STORAGE_BUCKET)
+#         # Store user's resume in Firebase Storage
+#         filename = upload_resume.name
+#         blob = bucket.blob(f"userresume/{filename}")
+#         blob.upload_from_file(upload_resume)
+
+#         context = {"resume_uploaded": True}
+#     else:
+#         context = {"resume_uploaded": False}
+
+#     return render(request, "Resume.html", context)
+
+
+from firebase_admin import storage
+
+
 def upload_resume(request):
-    if request.method == "POST" and "uploadresume" in request.FILES:
+    error_message = None  # Initialize error message variable
+
+    if request.method == "POST":
+        # Check if the file is not uploaded
+        if "uploadresume" not in request.FILES:
+            error_message = "Please select a file to upload."
+            context = {"error_message": error_message}
+            return render(request, "Resume.html", context)
+
+        # Get the uploaded resume file
         upload_resume = request.FILES["uploadresume"]
-        # if request.method == "POST" and request.FILES["uploadresume"]:
-        # upload_resume = request.FILES["uploadresume"]
+
+        # Check if the file is a PDF
+        if not upload_resume.name.endswith(".pdf"):
+            # If the file is not a PDF, set the error message
+            error_message = "Only PDF files are allowed for upload."
+            context = {"resume_uploaded": False, "error_message": error_message}
+            return render(request, "Resume.html", context)
+
+        # Get the selected job role from the form
+        try:
+            job_role = request.POST["job_role"]
+        except KeyError:
+            # If no job role is selected, set the error message
+            error_message = "Please select a job role."
+            context = {"resume_uploaded": False, "error_message": error_message}
+            return render(request, "Resume.html", context)
+
+        # Define the filename with extension
+        filename = f"{job_role}_{upload_resume.name}.pdf"
+
+        # Upload the resume to Firebase Storage with metadata
         bucket = storage.bucket(settings.FIREBASE_STORAGE_BUCKET)
-        # Store user's resume in Firebase Storage
-        filename = upload_resume.name
-        blob = bucket.blob(f"userresume/{filename}")
+        blob = bucket.blob(f"templateresume/{filename}")
+
+        # Set content type metadata
+        blob.content_type = "application/pdf"
+
+        # Upload the file
         blob.upload_from_file(upload_resume)
 
+        # Set context for template rendering
         context = {"resume_uploaded": True}
     else:
+        # If it's not a POST request, set context accordingly
         context = {"resume_uploaded": False}
 
     return render(request, "Resume.html", context)
-
-
-# def list_resumes(request):
-#     # Assuming resumes are stored in a folder named 'templateresume' in Firebase Storage
-#     # Access Firebase Storage
-#     bucket = storage.bucket("resumedjango.appspot.com")
-
-#     # List all resume files in Firebase Storage
-#     blobs = bucket.list_blobs(
-#         prefix="templateresume/"
-#     )  # Assuming resumes are stored in a 'templateresume' folder
-#     resume_files = [blob.name for blob in blobs if blob.name.endswith(".pdf")]
-#     resume_files_name = [
-#         blob.name.split("/")[-1] for blob in blobs if blob.name.endswith(".pdf")
-#     ]
-
-#     # Base URL for resume files
-#     base_url = "https://storage.googleapis.com/resumedjango.appspot.com/"
-
-#     # Generate URLs for resume files
-#     resume_urls = [base_url + file_name for file_name in resume_files]
-
-#     # Render a template with links to all resume files
-#     context = {"resume_files": zip(resume_urls, resume_files_name)}
-#     return render(request, "Resume_download.html", context)
 
 
 def list_resumes(request):

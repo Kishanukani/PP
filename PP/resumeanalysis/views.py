@@ -287,14 +287,14 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[+] Awesome! You have added Objective",
-                        "color": "#1ed760",
+                        "color": "#00FF02",
                     }
                 )
             else:
                 resume_tips.append(
                     {
                         "message": "[-] Please add your career objective, it will give your career intention to the Recruiters.",
-                        "color": "##FF0000",
+                        "color": "#FF0000",
                     }
                 )
             if "Declaration" in resume_text:
@@ -302,14 +302,14 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[+] Awesome! You have added Declaration",
-                        "color": "#1ed760",
+                        "color": "#00FF02",
                     }
                 )
             else:
                 resume_tips.append(
                     {
                         "message": "[-] Please add Declaration. It will give the assurance that everything written on your resume is true and fully acknowledged by you",
-                        "color": "##FF0000",
+                        "color": "#FF0000",
                     }
                 )
 
@@ -318,14 +318,14 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[+] Awesome! You have added your Hobbies",
-                        "color": "#1ed760",
+                        "color": "#00FF02",
                     }
                 )
             else:
                 resume_tips.append(
                     {
                         "message": "[-] Please add Hobbies. It will show your personality to the Recruiters and give the assurance that you are fit for this role or not.",
-                        "color": "##FF0000",
+                        "color": "#FF0000",
                     }
                 )
 
@@ -334,14 +334,14 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[+] Awesome! You have added your Achievements",
-                        "color": "#1ed760",
+                        "color": "#00FF02",
                     }
                 )
             else:
                 resume_tips.append(
                     {
                         "message": "[-] Please add Achievements. It will show that you are capable for the required position.",
-                        "color": "##FF0000",
+                        "color": "#FF0000",
                     }
                 )
 
@@ -350,14 +350,14 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[+] Awesome! You have added your Projects",
-                        "color": "#1ed760",
+                        "color": "#00FF02",
                     }
                 )
             else:
                 resume_tips.append(
                     {
                         "message": "[-] Please add Projects. It will show that you have done work related the required position or not.",
-                        "color": "##FF0000",
+                        "color": "#FF0000",
                     }
                 )
             resume_vid = random.choice(resume_videos)

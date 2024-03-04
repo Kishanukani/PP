@@ -12,19 +12,8 @@
   <!-- pdf viewer -->
   <div id="container1">
     <div class="child1">
-      <h1>PDF Viewer</h1>
-
-      <embed src="{{ pdf_data }}" width="100%" height="600px" id="pdfviewer" />
-      <h2>Bonus Video for Resume Writing Tips💡</h2>
-
-      <!-- <h3>✅ </h3> -->
-      <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
-
-      <h2>Bonus Video for Interview Tips💡 </h2>
-
-      <!-- <h3>✅</h3> -->
-
-      <iframe width="560" height="315" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
+      <!-- <h1>PDF Viewer</h1> -->
+      <embed src="{{ pdf_data }}" id="pdfviewer" />
     </div>
 
     <!-- resume analysis starts -->
@@ -150,6 +139,24 @@
         {% endfor %}
       </ul>
       {% endif %}
+    </div>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <div class="child3">
+    <div class="resume_vid">
+      <h2>Bonus Video for Resume Writing Tips💡</h2>
+
+      <!-- <h3>✅ </h3> -->
+      <iframe width="750" height="350" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="interview_vid">
+      <h2>Bonus Video for Interview Tips💡 </h2>
+      <!-- <h3>✅</h3> -->
+      <iframe width="750" height="350" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 
