@@ -15,6 +15,16 @@
       <h1>PDF Viewer</h1>
 
       <embed src="{{ pdf_data }}" width="100%" height="600px" id="pdfviewer" />
+      <h2>Bonus Video for Resume Writing Tips💡</h2>
+
+      <!-- <h3>✅ </h3> -->
+      <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
+
+      <h2>Bonus Video for Interview Tips💡 </h2>
+
+      <!-- <h3>✅</h3> -->
+
+      <iframe width="560" height="315" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- resume analysis starts -->
@@ -87,11 +97,10 @@
       </ul>
       <!-- <h1>Candidate Level</h1> -->
       <!-- <h4>your experience is {{exp}}</h4> -->
-    </div>
-  </div>
-  <!-- {% if exp_user %}
+
+      <!-- {% if exp_user %}
   {% endif %} -->
-  <!-- {% if cand_level %}
+      <!-- {% if cand_level %}
   <h4 style="text-align: left; color: 
             {% if cand_level == 'Fresher' %}
                 #d73b5c;
@@ -106,52 +115,44 @@
   {% endif %} -->
 
 
-  <h3>Recommended Course:</h3>
-  <ul>
-    {% for course in rec_course %}
-    <li><a href="{{ course.link }}" target="_blank">{{ course.name }}</a></li>
-    {% endfor %}
-  </ul>
+      <h3>Recommended Course:</h3>
+      <ul>
+        {% for course in rec_course %}
+        <li><a href="{{ course.link }}" target="_blank">{{ course.name }}</a></li>
+        {% endfor %}
+      </ul>
 
-  <h3>Resume Tips & Ideas💡</h3>
-  <ul>
-    {% for tip in tips %}
-    <li style="color: {{ tip.color }};">{{ tip.message }}</li>
-    {% endfor %}
-  </ul>
+      <h3>Resume Tips & Ideas💡</h3>
+      <ul>
+        {% for tip in tips %}
+        <li style="color: {{ tip.color }};">{{ tip.message }}</li>
+        {% endfor %}
+      </ul>
 
-  <h3>Resume Score📝</h3>
-  <style>
-    .stProgress>div>div>div>div {
-      background-color: #d73b5c;
-    }
-  </style>
+      <h3>Resume Score📝</h3>
+      <style>
+        .stProgress>div>div>div>div {
+          background-color: #d73b5c;
+        }
+      </style>
 
-  <h4>Your Resume Writing Score: {{ resume_score }}</h4>
-  <p>
-    Note: This score is calculated based on the content that you have in your
-    Resume.
-  </p>
+      <h4>Your Resume Writing Score: {{ resume_score }}</h4>
+      <p>
+        Note: This score is calculated based on the content that you have in your
+        Resume.
+      </p>
 
-  {% if resume_tips %}
-  <h3>Resume Tips:</h3>
-  <ul>
-    {% for tip in resume_tips %}
-    <li style="color: {{ tip.color }}">{{ tip.message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+      {% if resume_tips %}
+      <h3>Resume Tips:</h3>
+      <ul>
+        {% for tip in resume_tips %}
+        <li style="color: {{ tip.color }}">{{ tip.message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
 
-  <h2>Bonus Video for Resume Writing Tips💡</h2>
-
-  <h3>✅ </h3>
-  <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
-
-  <h2>Bonus Video for Interview Tips💡 </h2>
-
-  <h3>✅</h3>
-
-  <iframe width="560" height="315" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
 
 
 </body>

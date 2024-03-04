@@ -20,23 +20,25 @@ body{
     width: 50%;
     border: 2px solid pink;
 }
-#skills-section{
-    color: red;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: auto;
-    padding: 3px;
-    margin: 0px;
-    flex-wrap: wrap;
-    row-gap: 6px;
-    column-gap: 8px;
-    border: 1px solid pink;
+
+
+#skills-section {
+    color: red; /* Sets the text color to red */
+    display: flex; /* Makes the span elements behave as flex items */
+    flex-direction: row; /* Arranges the flex items in a row */
+    justify-content: left; /* Aligns the flex items to the left within the flex container */
+    align-items: center; /* Aligns the flex items vertically in the center */
+    width: auto; /* Allows the width of the flex container to adjust automatically */
+    padding: 3px; /* Adds padding around each skill */
+    margin: 0px; /* Removes any margin around each skill */
+    flex-wrap: wrap; /* Allows flex items to wrap to the next line if there's not enough space */
+    row-gap: 6px; /* Adds vertical gap between flex items */
+    column-gap: 8px; /* Adds horizontal gap between flex items */
+    border: 1px solid pink; /* Adds a pink border around the flex container */
 }
-.skill
+
+
+span .skill 
 {
-    color: blue;
+    border:1px solid white;
 }
-
-
