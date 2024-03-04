@@ -23,6 +23,18 @@ def Resume(request):
     return render(request, "Resume.html")
 
 
+def placementprediction(request):
+    return render(request, "placementprediction.html")
+
+
+def learning(request):
+    return render(request, "learning.html")
+
+
+def links(request):
+    return render(request, "links.html")
+
+
 def Signup(request):
     return render(request, "sign_up.html")
 
@@ -55,6 +67,9 @@ def upload_resume(request):
 #         prefix="templateresume/"
 #     )  # Assuming resumes are stored in a 'templateresume' folder
 #     resume_files = [blob.name for blob in blobs if blob.name.endswith(".pdf")]
+#     resume_files_name = [
+#         blob.name.split("/")[-1] for blob in blobs if blob.name.endswith(".pdf")
+#     ]
 
 #     # Base URL for resume files
 #     base_url = "https://storage.googleapis.com/resumedjango.appspot.com/"
@@ -63,8 +78,8 @@ def upload_resume(request):
 #     resume_urls = [base_url + file_name for file_name in resume_files]
 
 #     # Render a template with links to all resume files
-#     context = {"resume_files": zip(resume_files, resume_urls)}
-#     return render(request, "resume_list.html", context)
+#     context = {"resume_files": zip(resume_urls, resume_files_name)}
+#     return render(request, "Resume_download.html", context)
 
 
 def list_resumes(request):

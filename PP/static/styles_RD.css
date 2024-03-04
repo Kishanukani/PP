@@ -71,9 +71,9 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 350px; /* Set the height */
+    height: 250px; /* Set the height */
     width: 300px; /* Set the width */
-    border: 5px solid greenyellow;
+    /* border: 5px solid greenyellow; */
 }
 
 .resume-item h2 {

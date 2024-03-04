@@ -12,23 +12,24 @@ from pdfminer3.pdfinterp import PDFResourceManager
 from pdfminer3.pdfinterp import PDFPageInterpreter
 from pdfminer3.converter import TextConverter
 import random
+from datetime import datetime
 from .Courses import (
     ds_course,
     uiux_course,
     web_course,
     android_course,
     ios_course,
-    resume_videos,
+    # resume_videos,
     interview_videos,
 )
 
 
-import pafy
+# import pafy
 
 
-def fetch_yt_video(link):
-    video = pafy.new(link)
-    return video.title
+# def fetch_yt_video(link):
+#     video = pafy.new(link)
+#     return video.title
 
 
 def course_recommender(course_list):
@@ -55,19 +56,23 @@ def show_pdf(file_path):
     return pdf_data
 
 
-def determine_candidate_level(no_of_pages):
-    if no_of_pages == 1:
-        return "Fresher"
-    elif no_of_pages == 2:
-        return "Intermediate"
-    elif no_of_pages >= 3:
-        return "Experienced"
+# def determine_candidate_level(no_of_pages):
+#     if no_of_pages == 1:
+#         return "Fresher"
+#     elif no_of_pages == 2:
+#         return "Intermediate"
+#     elif no_of_pages >= 3:
+#         return "Experienced"
+
+
+# def experiences(total_experience):
+#     return total_experience
 
 
 def resume_analysis(request):
     if request.method == "POST":
         pdf_file = request.FILES["pdf_file"]
-        save_image_path = "/" + pdf_file.name
+        save_image_path = "/PP - Copy/PP/resumeanalysis/Uploded_resume/" + pdf_file.name
         with open(save_image_path, "wb") as f:
             f.write(pdf_file.read())
         pdf_data = show_pdf(save_image_path)
@@ -76,7 +81,8 @@ def resume_analysis(request):
 
         if resume_data:
             resume_text = pdf_reader(save_image_path)
-            cand_level = determine_candidate_level(resume_data["no_of_pages"])
+            # cand_level = determine_candidate_level(resume_data["no_of_pages"])
+            exp = resume_data["total_experience"]
             template = loader.get_template("resume_analysis.html")
             context = {
                 "resume_data": resume_data,
@@ -354,7 +360,7 @@ def resume_analysis(request):
             # resume_vid = random.choice(resume_videos)
             # res_vid_title = fetch_yt_video(resume_vid)
 
-            # interview_vid = random.choice(interview_videos)
+            interview_vid = random.choice(interview_videos)
             # int_vid_title = fetch_yt_video(interview_vid)
             context = {
                 "resume_data": resume_data,
@@ -369,7 +375,12 @@ def resume_analysis(request):
                 "resume_tips": resume_tips,
                 "resume_score": resume_score,
                 "pdf_data": pdf_data,
-                "cand_level": cand_level,
+                # "cand_level": cand_level,
+                # "total_experience": total_experience,
+                "exp": exp,
+                # "exp_user": exp_us/er,
+                # "resume_vid": resume_vid,
+                "interview_vid": interview_vid,
             }
             return HttpResponse(template.render(context, request))
 

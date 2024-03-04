@@ -182,23 +182,40 @@ uiux_course = [
     ["Adobe XD in Simple Way", "https://learnux.io/course/adobe-xd"],
 ]
 
-resume_videos = [
-    "https://youtu.be/3agP4x8LYFM",
-    "https://youtu.be/fS_t3yS8v5s",
-    "https://youtu.be/aArb68OBFPg",
-    "https://youtu.be/h-NuvOeWWh0",
-    "https://youtu.be/BdQniERyw8I",
-    "https://youtu.be/Tt08KmFfIYQ",
-    "https://youtu.be/CLUsplI4xMU",
-    "https://youtu.be/bhwEsfXS6y8",
+interview_videos = [
+    "https://www.youtube.com/watch?v=Tt08KmFfIYQ",
+    "https://www.youtube.com/watch?v=wFbU185CvDU",
+    "https://www.youtube.com/watch?v=KukmClH1KoA",
+    "https://www.youtube.com/watch?v=7_aAicmPB3A",
+    "https://www.youtube.com/watch?v=1mHjMNZZvFo",
+    "https://www.youtube.com/watch?v=WfdtKbAJOmE",
+    "https://www.youtube.com/watch?v=TZ3C_syg9Ow",
 ]
 
-interview_videos = [
-    "https://youtu.be/Tt08KmFfIYQ",
-    "https://youtu.be/KukmClH1KoA",
-    "https://youtu.be/7_aAicmPB3A",
-    "https://youtu.be/1mHjMNZZvFo",
-    "https://youtu.be/WfdtKbAJOmE",
-    "https://youtu.be/wFbU185CvDU" "https://youtu.be/wFbU185CvDU",
-    "https://youtu.be/TZ3C_syg9Ow",
-]
+# resume_videos = [
+#     "https://youtu.be/3agP4x8LYFM",
+#     "https://youtu.be/fS_t3yS8v5s",
+#     "https://youtu.be/aArb68OBFPg",
+#     "https://youtu.be/h-NuvOeWWh0",
+#     "https://youtu.be/BdQniERyw8I",
+#     "https://youtu.be/Tt08KmFfIYQ",
+#     "https://youtu.be/CLUsplI4xMU",
+#     "https://youtu.be/bhwEsfXS6y8",
+# ]
+
+# interview_videos = [
+#     # "https://youtu.be/Tt08KmFfIYQ",
+#     "https://www.youtube.com/Tt08KmFfIYQ",
+#     # "https://youtu.be/wFbU185CvDU",
+#     "https://www.youtube.com/wFbU185CvDU",
+#     # "https://youtu.be/KukmClH1KoA",
+#     "https://www.youtube.com/KukmClH1KoA",
+#     # "https://youtu.be/7_aAicmPB3A",
+#     "https://www.youtube.com/7_aAicmPB3A",
+#     # "https://youtu.be/1mHjMNZZvFo",
+#     "https://www.youtube.com/1mHjMNZZvFo",
+#     # "https://youtu.be/WfdtKbAJOmE",
+#     "https://www.youtube.com/WfdtKbAJOmE",
+#     # "https://youtu.be/TZ3C_syg9Ow",
+#     "https://www.youtube.com/TZ3C_syg9Ow",
+# ]

@@ -6,84 +6,94 @@
 
 
 body{
-    background-color: bisque;
+    background-color: black;
 }
-.nav1{
-    
-    background-color: green;
-    color: white;
+/* Navbar */
+/* ********************************************************** */
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: border-box;
     display: flex;
+    /* border: 10px solid pink; */
+}
+
+.navbar {
+    /* background-color: black; */
+    width: 95%;
+    height: 12%;
+    /* border: solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: greenyellow;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul,
+li a {
+    text-decoration: none;
+    color: greenyellow;
+    font-family: cursive;
+    font-size: 17px;
+}
+
+.menuicon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+/* navbar ends here */
+
+
+/* container 2 */
+.container2 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    /* background-color: bisque; */
+    /* background-color: lime; */
+    /* color: white; */
+    display: flex;
+    color: black;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    height: 30px;
-    /* justify-content: space-between; This property places the left and right content at the extremes */
-    /* align-items: center; */
+    height: 500px;    
+    row-gap: 20px;
+    /* border: 2px solid pink; */
 }
-.nav1 li{
-    display: inline;
-    padding:10px 50px ;
-    list-style: none;
+#nav2{
+    padding-top: 10px;
+    /* border: 3px solid blue; */
+    margin: 20px;
+    /* height: 100%; */
 }
-
-
-.nav1 ul
-{
-    margin: 5px 0;
-}
-.nav1 a{
-    /* border: 2px solid black; */
-    text-decoration: none;
-    /* color: black; */
-    color: white;
-
-
-}
-.nav1 a:hover
-{
-    color: black;
-}
-/* .nav1 a:visited
-{
-    color: grey;
-}
-.nav1 a:active
-{
-    color:pink;
-} */
-
-#logo
-{
-    position: absolute;
-    /* border: 2px solid black; */
-    display: inline;
-    /* right: 0; */
-    left: 0;
-    /* margin-left: 10px; */
-    margin: 4px 50px;
-}
-
-#login
-{
-    position: absolute;
-    /* border: 2px solid black; */
-    display: inline;
-    right: 0;
-    margin: 4px 80px;
-
-}
-#nav2 {
-    position: relative;
-    width: 50%;
-    margin: auto;
-    background-color: bisque;
-    color: black;
-    
-}
-
 #nav2 li{
     border: 2px solid black;
+    display: inline;
+    padding:10px 50px ;
+    list-style: none; 
+    background-color: lime;
+    margin: 0 10px; 
 }
 #nav2 li:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.591);
@@ -91,8 +101,12 @@ body{
     background-color: grey;
     color: black;
 }
+#nav2 ul{
+    margin: 5px 0;
+}
 #nav2 a{
     color: black;
+    text-decoration: none;
 
 }
 
@@ -254,7 +268,7 @@ button
 }
 
 button{
-    /* color: pink; */
+    color: pink;
     height: 40px;
     width: 20%;
 }

@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume index</title>
 
-    {% load static %}
-    <link rel="stylesheet" href="{% static '/style.css' %}" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume index</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
+    rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/style.css' %}" />
+</head>
 
-  <body>
-    <nav class="nav1">
-      <!-- <ul></ul> -->
-      <div id="logo">Logo</div>
+<body>
+
+  <div class="container">
+    <div class="navbar">
+      <div id="particle-js"></div>
+      <div class="logo">Logiplacement</div>
+      <nav>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Signup</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </nav>
+      <img src=" /static/Logo/menu.png" class="menuicon" alt="menu image">
+    </div>
+  </div>
+  <br />
+  <br />
+  <!-- #include virtual="navbar.html" -->
+  <div class="container2">
+
+    <div id="nav2">
       <ul>
-        <li><a href="#"> Home </a></li>
-        <li><a href="#"> Services </a></li>
-        <li><a href="#"> About us </a></li>
-        <li><a href="#"> Devloper </a></li>
-      </ul>
-      <div id="login"><a href="{% url 'sign_up' %}">Login</a></div>
-      <!-- <div id="login"><a href="{% url 'sign_up' %}">Login</a></div> -->
-    </nav>
-    <br />
-    <br />
-    <div class="nav1" id="nav2">
-      <ul>
-        <li id="Resume">
+        <li>
           <a href="{% url 'resumepage' %}">Resume</a>
         </li>
-
-        <li id="">
-          <a href="{% url 'list_resumes' %}">Template Resumes</a>
+        <li>
+          <a href="{% url 'prediction' %}">Placement Prediction</a>
         </li>
-        {% comment %} <li id="">
-          <a href="{% url 'resum_analysis' %}">resum_analysis</a>
-        </li> {% endcomment %}
+        <li>
+          <a href="{% url 'learning' %}">Learningss</a>
+        </li>
 
-        {% comment %} <li id=""><>Resume</a></li> {% endcomment %}
       </ul>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

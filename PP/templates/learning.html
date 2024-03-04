@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnings</title>
+
+  <!-- <link rel="stylesheet" href="learning.css"> -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/learning.css' %}" />
+
+</head>
+
+<body>
+
+  <div id="particle-js"></div>
+
+  <div class="lcard">
+    <img src="https://via.placeholder.com/300" alt="Card Image">
+    <h2>Card 1</h2>
+    <p>This is card.</p>
+  </div>
+
+  <div class="lcard">
+    <img src="/static/img/roadmap.png" alt="Card Image">
+    <h2>RoadMaps</h2>
+    <p>Find the RoadMaps for your career</p>
+  </div>
+
+  <div class="lcard">
+
+    <a href="{% url 'links' %}"><img src="/static/img/course.jpg" alt="Card Image"></a>
+    <h2>Links</h2>
+    <p>Explore the Study Material</p>
+  </div>
+
+  <script>
+
+    var lcards = document.querySelector(".lcard");
+
+    lcards.addEventListener("mouseover", () => {
+
+    });
+
+  </script>
+
+  <!-- particle js -->
+  <script src="particles.js"></script>
+  <script src="myjs.js"></script>
+
+</body>
+
+</html>

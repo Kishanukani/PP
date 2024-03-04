@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+#container1{
+    display: flex;
+}
+
+.child1
+{
+    width: 50%;
+    border: 2px solid red;
+
+}
+.child2
+{
+    width: 50%;
+    border: 2px solid pink;
+}

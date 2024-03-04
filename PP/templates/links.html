@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Links</title>
+  {%load static%}
+  <link rel="stylesheet" href="{% static '/links.css' %}" />
+
+  <!-- <link rel="stylesheet" href="links.css"> -->
+</head>
+
+<body>
+  <header>
+    <h1></h1>
+  </header>
+  <div id="particle-js"></div>
+  <div class="ccontainer" id="container">
+    <div class="ccard" id="web-development" onclick="showSection('web-development')">
+      <h2>Web Development</h2>
+      <p>Links related to web development...</p>
+      <a href="#">Explore</a>
+    </div>
+
+    <div class="ccard" id="mobile-development" onclick="showSection('mobile-development')">
+      <h2>Mobile Development</h2>
+      <p>Links related to mobile development...</p>
+      <a href="#">Explore</a>
+    </div>
+
+    <div class="ccard" id="data-science" onclick="showSection('data-science')">
+      <h2>Data Science</h2>
+      <p>Links related to data science...</p>
+      <a href="#">Explore</a>
+    </div>
+
+    <div class="ccard" id="machine-learning" onclick="showSection('machine-learning')">
+      <h2>Machine Learning</h2>
+      <p>Links related to machine learning...</p>
+      <a href="#">Explore</a>
+    </div>
+
+    <div class="ccard" id="programming-languages" onclick="showSection('programming-languages')">
+      <h2>Programming Languages</h2>
+      <p>Links related to various programming languages...</p>
+      <a href="#">Explore</a>
+    </div>
+  </div>
+
+  <div class="go-back" id="go-back" style="display: none;">
+    <a href="links.html" onclick="goBack()">Go back</a>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide the container
+      document.getElementById('container').style.display = 'none';
+
+      // Show the selected section
+      var selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block';
+
+      // Show the "Go back" link
+      document.getElementById('go-back').style.display = 'block';
+    }
+
+    function goBack() {
+      // Hide the current section
+      var sections = document.querySelectorAll('.ccard');
+      sections.forEach(function (section) {
+        section.style.display = 'none';
+      });
+
+      // Show the container
+      document.getElementById('container').style.display = 'flex';
+
+      // Hide the "Go back" link
+      document.getElementById('go-back').style.display = 'none';
+    }
+  </script>
+
+  <!-- particle js -->
+  <script src="particles.js"></script>
+  <script src="myjs.js"></script>
+
+</body>
+
+</html>
