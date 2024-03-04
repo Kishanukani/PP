@@ -19,7 +19,7 @@ from .Courses import (
     web_course,
     android_course,
     ios_course,
-    # resume_videos,
+    resume_videos,
     interview_videos,
 )
 
@@ -72,7 +72,7 @@ def show_pdf(file_path):
 def resume_analysis(request):
     if request.method == "POST":
         pdf_file = request.FILES["pdf_file"]
-        save_image_path = "/PP - Copy/PP/resumeanalysis/Uploded_resume/" + pdf_file.name
+        save_image_path = "/PP/PP/resumeanalysis/Uploded_resume/" + pdf_file.name
         with open(save_image_path, "wb") as f:
             f.write(pdf_file.read())
         pdf_data = show_pdf(save_image_path)
@@ -357,7 +357,7 @@ def resume_analysis(request):
                         "color": "#000000",
                     }
                 )
-            # resume_vid = random.choice(resume_videos)
+            resume_vid = random.choice(resume_videos)
             # res_vid_title = fetch_yt_video(resume_vid)
 
             interview_vid = random.choice(interview_videos)
@@ -379,7 +379,7 @@ def resume_analysis(request):
                 # "total_experience": total_experience,
                 "exp": exp,
                 # "exp_user": exp_us/er,
-                # "resume_vid": resume_vid,
+                "resume_vid": resume_vid,
                 "interview_vid": interview_vid,
             }
             return HttpResponse(template.render(context, request))

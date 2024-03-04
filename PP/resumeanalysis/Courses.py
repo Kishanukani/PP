@@ -183,25 +183,44 @@ uiux_course = [
 ]
 
 interview_videos = [
-    "https://www.youtube.com/watch?v=Tt08KmFfIYQ",
-    "https://www.youtube.com/watch?v=wFbU185CvDU",
-    "https://www.youtube.com/watch?v=KukmClH1KoA",
-    "https://www.youtube.com/watch?v=7_aAicmPB3A",
-    "https://www.youtube.com/watch?v=1mHjMNZZvFo",
-    "https://www.youtube.com/watch?v=WfdtKbAJOmE",
-    "https://www.youtube.com/watch?v=TZ3C_syg9Ow",
+    # "https://www.youtube.com/watch?v=Tt08KmFfIYQ",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/watch?v=wFbU185CvDU",
+    # "https://www.youtube.com/watch?v=KukmClH1KoA",
+    # "https://www.youtube.com/watch?v=7_aAicmPB3A",
+    # "https://www.youtube.com/watch?v=1mHjMNZZvFo",
+    # "https://www.youtube.com/watch?v=WfdtKbAJOmE",
+    # "https://www.youtube.com/watch?v=TZ3C_syg9Ow",
 ]
 
-# resume_videos = [
-#     "https://youtu.be/3agP4x8LYFM",
-#     "https://youtu.be/fS_t3yS8v5s",
-#     "https://youtu.be/aArb68OBFPg",
-#     "https://youtu.be/h-NuvOeWWh0",
-#     "https://youtu.be/BdQniERyw8I",
-#     "https://youtu.be/Tt08KmFfIYQ",
-#     "https://youtu.be/CLUsplI4xMU",
-#     "https://youtu.be/bhwEsfXS6y8",
-# ]
+resume_videos = [
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    # "https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX",
+    "https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp",
+    "https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp",
+    "https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp",
+    "https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp",
+    "https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp",
+    # <iframe width="560" height="315" src="https://www.youtube.com/embed/aArb68OBFPg?si=sl2768JMFptJJlrk&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    # # "https://youtu.be/3agP4x8LYFM",
+    # "https://youtu.be/fS_t3yS8v5s",
+    # "https://youtu.be/aArb68OBFPg",
+    # "https://youtu.be/h-NuvOeWWh0",
+    # "https://youtu.be/BdQniERyw8I",
+    # "https://youtu.be/Tt08KmFfIYQ",
+    # "https://youtu.be/CLUsplI4xMU",
+    # "https://youtu.be/bhwEsfXS6y8",
+]
 
 # interview_videos = [
 #     # "https://youtu.be/Tt08KmFfIYQ",

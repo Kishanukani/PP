@@ -104,12 +104,12 @@
     Resume.
   </p>
 
-  <!-- <h2>Bonus Video for Resume Writing Tips💡</h2>
+  <h2>Bonus Video for Resume Writing Tips💡</h2>
 
-  <h3>✅ {{ resume_vid_title }}</h3>
-  <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe> -->
+  <h3>✅ </h3>
+  <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
 
-  <h2>Bonus Video for Interview Tips💡 {{interview_vid}}</h2>
+  <h2>Bonus Video for Interview Tips💡 {{interview_vid }}</h2>
 
   <!-- <h3>✅ {{ int_vid_title }}</h3> -->
   <h3>✅</h3>
@@ -117,10 +117,14 @@
     <source src="{{ interview_vid }}" type="video/mp4">
     Your browser does not support the video tag.
   </video> -->
-  <h3>Embedded YouTube Video</h3>
+  <h3>Embedded YouTube Video {{interview_vid }}</h3>
   <!-- Replace VIDEO_ID with the actual ID of the YouTube video -->
   {%load static%}
   <iframe width="560" height="315" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe> -->
 
 </body>
 
