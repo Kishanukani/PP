@@ -109,6 +109,9 @@ def resume_analysis(request):
                 "node jS",
                 "react js",
                 "php",
+                "Front End Coding",
+                "Database",
+                "Website",
                 "laravel",
                 "magento",
                 "wordpress",
@@ -291,7 +294,7 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[-] Please add your career objective, it will give your career intention to the Recruiters.",
-                        "color": "#000000",
+                        "color": "##FF0000",
                     }
                 )
             if "Declaration" in resume_text:
@@ -306,7 +309,7 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[-] Please add Declaration. It will give the assurance that everything written on your resume is true and fully acknowledged by you",
-                        "color": "#000000",
+                        "color": "##FF0000",
                     }
                 )
 
@@ -322,7 +325,7 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[-] Please add Hobbies. It will show your personality to the Recruiters and give the assurance that you are fit for this role or not.",
-                        "color": "#000000",
+                        "color": "##FF0000",
                     }
                 )
 
@@ -338,7 +341,7 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[-] Please add Achievements. It will show that you are capable for the required position.",
-                        "color": "#000000",
+                        "color": "##FF0000",
                     }
                 )
 
@@ -354,7 +357,7 @@ def resume_analysis(request):
                 resume_tips.append(
                     {
                         "message": "[-] Please add Projects. It will show that you have done work related the required position or not.",
-                        "color": "#000000",
+                        "color": "##FF0000",
                     }
                 )
             resume_vid = random.choice(resume_videos)

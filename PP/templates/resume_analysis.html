@@ -9,22 +9,30 @@
 </head>
 
 <body>
+  <!-- pdf viewer -->
   <div id="container1">
     <div class="child1">
       <h1>PDF Viewer</h1>
 
       <embed src="{{ pdf_data }}" width="100%" height="600px" id="pdfviewer" />
     </div>
+
+    <!-- resume analysis starts -->
     <div class="child2">
       <h1>Resume Analysis</h1>
       <h2>Hello {{ resume_data.name }}</h2>
 
-      <label for="skills">Your Current Skills:</label><br />
-      <input type="text" id="skills" name="skills" value="{{ resume_data.skills }}" readonly /><br />
+      Your Current Skills are:
+      <div id="skills-section">
+        {% for skill in resume_data.skills %}
+        <span class="skill">{{ skill }}</span>
+        {% endfor %}
+      </div>
 
       <p>See our skills recommendation below:</p>
 
-      {% for i in resume_data.skills %} {% if i.lower in ds_keyword %}
+      <!-- {% for i in resume_data.skills %}
+      {% if i.lower in ds_keyword %}
       <div>
         <h3>Our analysis says you are looking for Data Science Jobs.</h3>
         <h4>Recommended skills for you:</h4>
@@ -35,34 +43,55 @@
         </ul>
       </div>
       {% elif i.lower in web_keyword %}
-      <!-- Web Development Recommendation -->
-      <!-- Similar structure as above -->
+      <h3>Our analysis says you are looking for Web Development Jobs.</h3>
+      <h4>Recommended skills for you:</h4>
+      <ul>
+        {% for skill in web_recommended_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
       {% elif i.lower in android_keyword %}
-      <!-- Android App Development Recommendation -->
-      <!-- Similar structure as above -->
+      <h3>Our analysis says you are looking for Android Development Jobs.</h3>
+      <h4>Recommended skills for you:</h4>
+      <ul>
+        {% for skill in android_recommended_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
       {% elif i.lower in ios_keyword %}
-      <!-- IOS App Development Recommendation -->
-      <!-- Similar structure as above -->
+      <h3>Our analysis says you are looking for ios Developer Jobs.</h3>
+      <h4>Recommended skills for you:</h4>
+      <ul>
+        {% for skill in ios_recommended_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
       {% elif i.lower in uiux_keyword %}
-      <!-- UI-UX Recommendation -->
-      <!-- Similar structure as above -->
-      {% endif %} {% endfor %}
+      <h3>Our analysis says you are looking for UIUX Development Jobs.</h3>
+      <h4>Recommended skills for you:</h4>
+      <ul>
+        {% for skill in uiux_recommended_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endfor %} -->
 
       <h1>Resume Analysis Results</h1>
-      <h2>Recommended Field: {{ reco_field }}</h2>
-      <h3>Recommended Skills:</h3>
+      <h2>Recommended Field:Our analysis Says You are Looking for jobs in {{ reco_field }}</h2>
+      <h3>Recommended Skills For {{reco_field}}:</h3>
       <ul>
         {% for skill in recommended_skills %}
         <li>{{ skill }}</li>
         {% endfor %}
       </ul>
-      <h1>Candidate Level</h1>
-      <h4>your experience is {{exp}}</h4>
+      <!-- <h1>Candidate Level</h1> -->
+      <!-- <h4>your experience is {{exp}}</h4> -->
     </div>
   </div>
   <!-- {% if exp_user %}
   {% endif %} -->
-  {% if cand_level %}
+  <!-- {% if cand_level %}
   <h4 style="text-align: left; color: 
             {% if cand_level == 'Fresher' %}
                 #d73b5c;
@@ -74,7 +103,7 @@
         ">
     You are at {{ cand_level }} level!
   </h4>
-  {% endif %}
+  {% endif %} -->
 
 
   <h3>Recommended Course:</h3>
@@ -104,27 +133,26 @@
     Resume.
   </p>
 
+  {% if resume_tips %}
+  <h3>Resume Tips:</h3>
+  <ul>
+    {% for tip in resume_tips %}
+    <li style="color: {{ tip.color }}">{{ tip.message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
   <h2>Bonus Video for Resume Writing Tips💡</h2>
 
   <h3>✅ </h3>
   <iframe width="560" height="315" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
 
-  <h2>Bonus Video for Interview Tips💡 {{interview_vid }}</h2>
+  <h2>Bonus Video for Interview Tips💡 </h2>
 
-  <!-- <h3>✅ {{ int_vid_title }}</h3> -->
   <h3>✅</h3>
-  <!-- <video width="560" height="315" controls>
-    <source src="{{ interview_vid }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video> -->
-  <h3>Embedded YouTube Video {{interview_vid }}</h3>
-  <!-- Replace VIDEO_ID with the actual ID of the YouTube video -->
-  {%load static%}
+
   <iframe width="560" height="315" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
-  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/TZ3C_syg9Ow?si=UDmRtaWUBoUt88cX"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe> -->
+
 
 </body>
 

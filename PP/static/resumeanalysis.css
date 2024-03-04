@@ -2,10 +2,10 @@ body{
     background-color: black;
     color: white;
 }
-
 #container1{
     display: flex;
 }
+/* pdf viewer css */
 
 .child1
 {
@@ -13,8 +13,30 @@ body{
     border: 2px solid red;
 
 }
+
+/* resume analysis starts */
 .child2
 {
     width: 50%;
     border: 2px solid pink;
 }
+#skills-section{
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: auto;
+    padding: 3px;
+    margin: 0px;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 8px;
+    border: 1px solid pink;
+}
+.skill
+{
+    color: blue;
+}
+
+
