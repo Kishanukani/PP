@@ -65,17 +65,10 @@
         // Go back to the previous page after 3 seconds
         setTimeout(function () {
           alert("Resume uploaded successfully!");
-          window.location.reload();
-          // window.history.back();
-          // document.getElementById("uploadresume").reset();
+          // window.location.reload();
+          window.history.back();
+
         }, 10);
-
-        // function reset() {
-        //   setTimeout(function () {
-        //     window.location.reload();
-        //   }, 1000);
-        // }
-
       </script>
 
       {% elif error_message %}

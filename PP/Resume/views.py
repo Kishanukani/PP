@@ -167,7 +167,7 @@ def Login_process(request):
 
         if user is not None:
             login(request, user)
-            return redirect("hello")
+            return redirect("home")
 
         else:
             return HttpResponse("Username and Password are incorrect")
