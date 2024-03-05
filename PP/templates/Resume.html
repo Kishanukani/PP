@@ -57,200 +57,132 @@
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:h-80 md:h-40 w-full object-cover object-center" src="https://www.seek.co.nz/career-advice/web_images/blogs/216/4087/2022.007_BAM_Free-resume-template_600x468.png" alt="blog">
+          <img class="lg:h-80 md:h-40 w-full object-cover object-center"
+            src="https://www.seek.co.nz/career-advice/web_images/blogs/216/4087/2022.007_BAM_Free-resume-template_600x468.png"
+            alt="blog">
           <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-            <h1 class="mt-5 title-font text-lg font-medium text-white-900 mb-3"><span id="c1">Upload resume</span> Help others by providing your Resume.</h1>
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Upload Resume</h2>
+            <h1 class="mt-5 title-font text-lg font-medium text-white-900 mb-3"><span id="c1">Upload resume</span> Help
+              others by providing your Resume.</h1>
             <form action="{% url 'upload_resume' %}" method="post" enctype="multipart/form-data">
               {%csrf_token %}
-            <input type="file" name="uploadresume" id="uploadresume"class="mt-5 title-font text-lg font-medium text-white-900 mb-3" />
-            
-            <div class="mt-5 title-font text-lg font-medium text-white-900 relative mb-4">
-              <label class="leading-7 text-sm text-gray-400">Stream</label>
-              <select id="job_role" name="job_role"
+              <input type="file" name="uploadresume" id="uploadresume"
+                class="mt-5 title-font text-lg font-medium text-white-900 mb-3" />
+
+              <div class="mt-5 title-font text-lg font-medium text-white-900 relative mb-4">
+                <label class="leading-7 text-sm text-gray-400">Stream</label>
+                <select id="job_role" name="job_role"
                   class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                   <option value="" disabled selected>Select a job role</option>
                   <option value="software-engineer">Software Engineer</option>
                   <option value="data-scientist">Data Scientist</option>
                   <option value="project-manager">Project Manager</option>
-              </select>
-              <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-white hover:bg-indigo-600 rounded text-lg"type="submit">Submit</button>
-            </form>
-          </div>
-          </div>
-        </div>
-      </div>
-      
-
-      <div class="p-4 md:w-1/2">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:h-80 md:h-40 w-full object-cover object-center" src="https://www.theladders.com/wp-content/uploads/resume-190916-800x450.jpg" alt="blog">
-          <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-            <h1 class="mt-4 title-font text-lg font-medium text-white-900 mb-3"><span id="c1">Click below</span> to check the template resume.</h1>
-            <div class="flex items-center flex-wrap">
-              <a class="mt-5 text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 " href="{% url 'resume_download' %}">Check Your Resume
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="p-4 md:w-1/2">
-        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:h-80 md:h-40 w-full object-cover object-center" src="https://resumegenius.com/wp-content/uploads/what-is-a-resume.png" alt="blog">
-          <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-            <h1 class="title-font text-lg font-medium mb-3"><span id="c1">Upload Your Resume</span></h1>
-            <form method="post" enctype="multipart/form-data" action="analyzereume">
-              {% csrf_token %}
-              <input type="file" class="mt-5 title-font text-lg font-medium text-white-900 mb-3"name="pdf_file" />
-              <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"type="submit">Upload</button>
+                </select>
+                <button
+                  class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-white hover:bg-indigo-600 rounded text-lg"
+                  type="submit">Submit</button>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+
+    <div class="p-4 md:w-1/2">
+      <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+        <img class="lg:h-80 md:h-40 w-full object-cover object-center"
+          src="https://www.theladders.com/wp-content/uploads/resume-190916-800x450.jpg" alt="blog">
+        <div class="p-6">
+          <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Template Resume </h2>
+          <h1 class="mt-4 title-font text-lg font-medium text-white-900 mb-3"><span id="c1">Click below</span> to check
+            the template resume.</h1>
+          <div class="flex items-center flex-wrap">
+            <a class="mt-5 text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0 "
+              href="{% url 'resume_download' %}">Check Template Resumes
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-4 md:w-1/2">
+      <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+        <img class="lg:h-80 md:h-40 w-full object-cover object-center"
+          src="https://resumegenius.com/wp-content/uploads/what-is-a-resume.png" alt="blog">
+        <div class="p-6">
+          <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Analyze Your Resume</h2>
+          <h1 class="title-font text-lg font-medium mb-3"><span id="c1">Analyze Resume</span></h1>
+          <form method="post" enctype="multipart/form-data" action="analyzereume">
+            {% csrf_token %}
+            <input type="file" class="mt-5 title-font text-lg font-medium text-white-900 mb-3" name="pdf_file" />
+            <button
+              class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              type="submit">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
 <br />
-    <br />
-    <br>
-    {% if resume_uploaded %}
-    <h1 class="op">
-      <p>Resume uploaded successfully</p>
-    </h1>
+<br />
+<br>
+{% if resume_uploaded %}
+<h1 class="op">
+  <p>Resume uploaded successfully</p>
+</h1>
 
-    <script>
-      // Go back to the previous page after 3 seconds
-      setTimeout(function () {
-        alert("Resume uploaded successfully!");
-        // window.location.reload();
-        window.history.back();
+<script>
+  // Go back to the previous page after 3 seconds
+  setTimeout(function () {
+    alert("Resume uploaded successfully!");
+    // window.location.reload();
+    window.history.back();
 
-      }, 10);
-    </script>
+  }, 10);
+</script>
 
-    {% elif error_message %}
-    <h1 class="op">
-      <p>{{ error_message }}</p>
-      <script>
-        // Go back to the previous page after 3 seconds
-        setTimeout(function () {
-          alert("{{error_message}}");
-          window.history.back();
-        }, 10);
-      </script>
-    </h1>
+{% elif error_message %}
+<h1 class="op">
+  <p>{{ error_message }}</p>
+  <script>
+    // Go back to the previous page after 3 seconds
+    setTimeout(function () {
+      alert("{{error_message}}");
+      window.history.back();
+    }, 10);
+  </script>
+</h1>
 
-    {% else %}
-    <!-- <h1 class="op">
+{% else %}
+<!-- <h1 class="op">
         <p>Resume upload failed</p>
       </h1> -->
-    {% endif %}
-  </div>
+{% endif %}
+</div>
 
 
 <div class="container">
-  <div class="uploadresume">
-    <div class="text">Help others by providing your Resume</div>
-    <form action="{% url 'upload_resume' %}" method="post" enctype="multipart/form-data">
-      {% comment %} isem me atka tha yaha action me path dala hai jisse jab
-      bhi ye form ka submit hoga ,the path will be the current location and
-      the location in the action fir vo jayega urls me path check karga
-      jiska bhi match hoga uska function call karega {% endcomment %}
-      {%csrf_token %}
-      <div class="uploadbtn">
-        <input type="file" name="uploadresume" id="uploadresume" style="width: 300px" class="custom-file-input" />
-      </div>
-      <div class="decriptio">
-        <select id="job_role" name="job_role">
-          <option value="" disabled selected>Select a job role</option>
-          <option value="software-engineer">Software Engineer</option>
-          <option value="data-scientist">Data Scientist</option>
-          <option value="project-manager">Project Manager</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-      <div class="submitbtn"><button type="submit">Submit</button></div>
-      <!-- <div class="submitbtn"><button type="reset">reset</button></div> -->
-    </form>
-    <br />
-    <br />
-    <br>
-    {% if resume_uploaded %}
-    <h1 class="op">
-      <p>Resume uploaded successfully</p>
-    </h1>
-
-    <script>
-      // Go back to the previous page after 3 seconds
-      setTimeout(function () {
-        alert("Resume uploaded successfully!");
-        // window.location.reload();
-        window.history.back();
-
-      }, 10);
-    </script>
-
-    {% elif error_message %}
-    <h1 class="op">
-      <p>{{ error_message }}</p>
-      <script>
-        // Go back to the previous page after 3 seconds
-        setTimeout(function () {
-          alert("{{error_message}}");
-          window.history.back();
-        }, 10);
-      </script>
-    </h1>
-
-    {% else %}
-    <!-- <h1 class="op">
-        <p>Resume upload failed</p>
-      </h1> -->
-    {% endif %}
-  </div>
-
-  <div class="uploadresume">
-    <div class="text">Click below to check the template resume</div>
-    <div class="tempimg">
-      <div class="overlappresume" id="one"></div>
-      <div class="overlappresume" id="two"></div>
-      <div class="overlappresume" id="three"></div>
-    </div>
-    <div class="checkresume">
-      <button type="submit"><a href="{% url 'resume_download' %}">Check resume</a></button>
-    </div>
-  </div>
-
-  <div class="uploadresume">
-    <h1>Upload Your Resume</h1>
-    <form method="post" enctype="multipart/form-data" action="analyzereume">
-      {% csrf_token %}
-      <input type="file" name="pdf_file" />
-      <button type="submit">Upload</button>
-    </form>
-  </div>
-</div>
-<footer class="text-gray-400 bg-gray-900 body-font">
-  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-          <span class="ml-3 text-xl">LogiPlacement</span>
+        <span class="ml-3 text-xl">LogiPlacement</span>
       </a>
       <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
-          2024 @Logplacement —
-          <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank"
-              rel="noopener noreferrer">BE Comp</a>
+        2024 @Logplacement —
+        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
       </p>
-  </div>
-</footer>
-</body>
+    </div>
+  </footer>
+  </body>
 
 </html>
