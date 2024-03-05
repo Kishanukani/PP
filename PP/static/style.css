@@ -150,7 +150,7 @@ li a {
     border-radius: 15px;
 } */
 .uploadbtn {
-    background-color: magenta;
+    background-color: white;
     height: 200px;
     position: relative;
     margin: 20px auto;
@@ -277,4 +277,24 @@ button{
 {
     display: inline;
     padding: 10px;
+}
+
+
+
+
+
+
+
+/* CSS */
+#c1
+{
+  font-size: 20px;
+  font-weight: 600;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ffe61b, #ffb72b, #ebf400);
+  background-size: 400% 400%;
+  animation: animate 8s ease-in infinite;
+  overflow: hidden;
 }
