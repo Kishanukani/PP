@@ -50,7 +50,7 @@
             <!-- Add more options as needed -->
           </select>
         </div>
-        <div class="submitbtn"><button type="submit" onclick="reset()">Submit</button></div>
+        <div class="submitbtn"><button type="submit">Submit</button></div>
         <!-- <div class="submitbtn"><button type="reset">reset</button></div> -->
       </form>
       <br />
@@ -65,16 +65,16 @@
         // Go back to the previous page after 3 seconds
         setTimeout(function () {
           alert("Resume uploaded successfully!");
-          // window.location.reload();
-          window.history.back();
+          window.location.reload();
+          // window.history.back();
           // document.getElementById("uploadresume").reset();
         }, 10);
 
-        function reset() {
-          setTimeout(function () {
-            window.location.reload();
-          }, 1000);
-        }
+        // function reset() {
+        //   setTimeout(function () {
+        //     window.location.reload();
+        //   }, 1000);
+        // }
 
       </script>
 

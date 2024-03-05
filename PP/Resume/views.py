@@ -8,6 +8,10 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 from firebase_admin import storage
 
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
+
 
 def welcome(request):
     return render(request, "index2.html")
@@ -134,3 +138,37 @@ def list_resumes(request):
     # Render a template with links to all resume files
     context = {"resume_files": zip(resume_files, resume_urls)}
     return render(request, "Resume_download.html", context)
+
+
+def signup(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        email = request.POST.get("email")
+        pass1 = request.POST.get("password1")
+        pass2 = request.POST.get("password2")
+
+        if pass1 != pass2:
+            return HttpResponse(
+                "Your password is incorrect and confirm password are not same"
+            )
+        else:
+            my_user = User.objects.create_user(username, email, pass1)
+            my_user.save()
+            return redirect("login")
+    return render(request, "signup.html")
+
+
+def Login_process(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        pass1 = request.POST.get("pass")
+
+        user = authenticate(request, username=username, password=pass1)
+
+        if user is not None:
+            login(request, user)
+            return redirect("hello")
+
+        else:
+            return HttpResponse("Username and Password are incorrect")
+    return render(request, "signup.html")
