@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ResuemPage</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
   <link
     href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
     rel="stylesheet">
@@ -12,7 +15,7 @@
   <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 
-<body style="background-color: white;">
+<!-- <body style="background-color: white;">
 
   <div class="container">
     <div class="navbar">
@@ -27,90 +30,113 @@
       </nav>
       <img src=" /static/Logo/menu.png" class="menuicon" alt="menu image">
     </div>
+  </div> -->
+
+<header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <span class="ml-3 text-xl" id="title1">Logiplacement</span>
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+      <a class="ml-5 mr-5 hover:text-white" href="{% url 'home' %}">Home</a>
+      <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+      <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+      <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+      <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
+      <a class="mr-5 hover:text-white">About Us</a>
+      <a class="mr-5 hover:text-white">Contact</a>
+
+    </nav>
+    <!-- HTML !-->
   </div>
+</header>
 
-  <div class="container">
-    <div class="uploadresume">
-      <div class="text">Help others by providing your Resume</div>
-      <form action="{% url 'upload_resume' %}" method="post" enctype="multipart/form-data">
-        {% comment %} isem me atka tha yaha action me path dala hai jisse jab
-        bhi ye form ka submit hoga ,the path will be the current location and
-        the location in the action fir vo jayega urls me path check karga
-        jiska bhi match hoga uska function call karega {% endcomment %}
-        {%csrf_token %}
-        <div class="uploadbtn">
-          <input type="file" name="uploadresume" id="uploadresume" style="width: 300px" class="custom-file-input" />
-        </div>
-        <div class="decriptio">
-          <select id="job_role" name="job_role">
-            <option value="" disabled selected>Select a job role</option>
-            <option value="software-engineer">Software Engineer</option>
-            <option value="data-scientist">Data Scientist</option>
-            <option value="project-manager">Project Manager</option>
-            <!-- Add more options as needed -->
-          </select>
-        </div>
-        <div class="submitbtn"><button type="submit">Submit</button></div>
-        <!-- <div class="submitbtn"><button type="reset">reset</button></div> -->
-      </form>
-      <br />
-      <br />
-      <br>
-      {% if resume_uploaded %}
-      <h1 class="op">
-        <p>Resume uploaded successfully</p>
-      </h1>
 
+
+
+
+<div class="container">
+  <div class="uploadresume">
+    <div class="text">Help others by providing your Resume</div>
+    <form action="{% url 'upload_resume' %}" method="post" enctype="multipart/form-data">
+      {% comment %} isem me atka tha yaha action me path dala hai jisse jab
+      bhi ye form ka submit hoga ,the path will be the current location and
+      the location in the action fir vo jayega urls me path check karga
+      jiska bhi match hoga uska function call karega {% endcomment %}
+      {%csrf_token %}
+      <div class="uploadbtn">
+        <input type="file" name="uploadresume" id="uploadresume" style="width: 300px" class="custom-file-input" />
+      </div>
+      <div class="decriptio">
+        <select id="job_role" name="job_role">
+          <option value="" disabled selected>Select a job role</option>
+          <option value="software-engineer">Software Engineer</option>
+          <option value="data-scientist">Data Scientist</option>
+          <option value="project-manager">Project Manager</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="submitbtn"><button type="submit">Submit</button></div>
+      <!-- <div class="submitbtn"><button type="reset">reset</button></div> -->
+    </form>
+    <br />
+    <br />
+    <br>
+    {% if resume_uploaded %}
+    <h1 class="op">
+      <p>Resume uploaded successfully</p>
+    </h1>
+
+    <script>
+      // Go back to the previous page after 3 seconds
+      setTimeout(function () {
+        alert("Resume uploaded successfully!");
+        // window.location.reload();
+        window.history.back();
+
+      }, 10);
+    </script>
+
+    {% elif error_message %}
+    <h1 class="op">
+      <p>{{ error_message }}</p>
       <script>
         // Go back to the previous page after 3 seconds
         setTimeout(function () {
-          alert("Resume uploaded successfully!");
-          // window.location.reload();
+          alert("{{error_message}}");
           window.history.back();
-
         }, 10);
       </script>
+    </h1>
 
-      {% elif error_message %}
-      <h1 class="op">
-        <p>{{ error_message }}</p>
-        <script>
-          // Go back to the previous page after 3 seconds
-          setTimeout(function () {
-            alert("{{error_message}}");
-            window.history.back();
-          }, 10);
-        </script>
-      </h1>
-
-      {% else %}
-      <!-- <h1 class="op">
+    {% else %}
+    <!-- <h1 class="op">
         <p>Resume upload failed</p>
       </h1> -->
-      {% endif %}
-    </div>
+    {% endif %}
+  </div>
 
-    <div class="uploadresume">
-      <div class="text">Click below to check the template resume</div>
-      <div class="tempimg">
-        <div class="overlappresume" id="one"></div>
-        <div class="overlappresume" id="two"></div>
-        <div class="overlappresume" id="three"></div>
-      </div>
-      <div class="checkresume">
-        <button type="submit"><a href="{% url 'resume_download' %}">Check resume</a></button>
-      </div>
+  <div class="uploadresume">
+    <div class="text">Click below to check the template resume</div>
+    <div class="tempimg">
+      <div class="overlappresume" id="one"></div>
+      <div class="overlappresume" id="two"></div>
+      <div class="overlappresume" id="three"></div>
     </div>
-
-    <div class="uploadresume">
-      <h1>Upload Your Resume</h1>
-      <form method="post" enctype="multipart/form-data" action="analyzereume">
-        {% csrf_token %}
-        <input type="file" name="pdf_file" />
-        <button type="submit">Upload</button>
-      </form>
+    <div class="checkresume">
+      <button type="submit"><a href="{% url 'resume_download' %}">Check resume</a></button>
     </div>
   </div>
+
+  <div class="uploadresume">
+    <h1>Upload Your Resume</h1>
+    <form method="post" enctype="multipart/form-data" action="analyzereume">
+      {% csrf_token %}
+      <input type="file" name="pdf_file" />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+</div>
 </body>
 
 </html>
