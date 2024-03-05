@@ -10,7 +10,7 @@ from firebase_admin import storage
 
 
 def welcome(request):
-    return render(request, "index.html")
+    return render(request, "index2.html")
 
 
 def index(request):

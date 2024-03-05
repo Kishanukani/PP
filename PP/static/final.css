@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #2f2f2f;
+  /* background: #061029; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5d5d5d;
+}
+
+.por-img {
+  border: 2px solid black;
+  width: 35px;
+}
+#title1 {
+  color: white;
+}
+#linkedin {
+  color: #0077b5;
+}
+#insta {
+  color: #c13584;
+}
+#twitter {
+  color: #1da1f2;
+}
+#github {
+  color: white;
+}
+.auto-type {
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(60deg, #e21143, #ffb03a);
+  background-size: 400% 400%;
+  animation: animate 8s ease-in infinite;
+  overflow: hidden;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+#profile-pic {
+  width: 400px;
+}
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+
+  border: 3px solid;
+  padding: 0.55em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+.idtsIY {
+  width: 64px;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(
+    270deg,
+    rgb(19, 173, 199) 0%,
+    rgb(148, 93, 214) 100%
+  );
+}
+#logi{
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ffe61b, #ffb72b, #ebf400);
+  background-size: 400% 400%;
+  animation: animate 8s ease-in infinite;
+  overflow: hidden;
+}
+#course1,
+#course2{
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ffe61b, #ffb72b, #ebf400);
+  background-size: 400% 400%;
+  animation: animate 8s ease-in infinite;
+  overflow: hidden;
+}
+
+#git {
+  margin-right: 30px;
+}
+#twitter {
+  margin-right: 30px;
+}
+#insta {
+  margin-right: 30px;
+}
+
+#git:hover {
+  transform: scale(1.5);
+}
+#twitter:hover {
+  transform: scale(1.5);
+}
+#insta:hover {
+  transform: scale(1.5);
+}
+#linkedin:hover {
+  transform: scale(1.5);
+}
+
+.section-divider-css::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 240px;
+  border-radius: 25px;
+  top: 0;
+  background: linear-gradient(90deg, #18aac8, #9060d6);
+}
