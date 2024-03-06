@@ -165,13 +165,15 @@
                             <label class="leading-7 text-sm text-gray-400">Internships</label>
                             <input type="number" id="internships" name="Internships" required
                                 placeholder="No of Internships Done"
-                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                min="0" max="5" oninput="validity.valid||(value='');">
                         </div>
 
                         <div class="relative mb-4">
                             <label class="leading-7 text-sm text-gray-400">CGPA</label>
                             <input type="number" step="0.01" id="cgpa" name="CGPA" required placeholder="CGPA"
-                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                min="0.00" max="10.00" oninput="validity.valid||(value='');">
                         </div>
 
 
@@ -188,7 +190,8 @@
                             <label for="backlog" class="leading-7 text-sm text-gray-400">Backlogs</label>
                             <input type="number" id="backlogs" name="HistoryOfBacklogs" required
                                 placeholder="No of Backlogs"
-                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                min="0.00" max="5.00" oninput="validity.valid||(value='');">
                         </div>
 
                         <input type='submit' value='Submit'
@@ -197,7 +200,7 @@
                 </div>
                 {%if result%}
 
-                <h1>Result of prediction is {{result}}</h1>
+                <h1 style="color: white;font-size: 80px;">Result of prediction is {{result}}</h1>
                 {%endif%}
     </section>
 
