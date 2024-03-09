@@ -8,47 +8,150 @@
 
   <!-- <link rel="stylesheet" href="learning.css"> -->
   {% load static %}
-  <link rel="stylesheet" href="{% static '/learning.css' %}" />
+  {% comment %} <link rel="stylesheet" href="{% static '/learning.css' %}" /> {% endcomment %}
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
 
 </head>
 
 <body>
+   <!--Header-->
+   <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+        <a class="ml-5 mr-5 hover:text-white" href="{% url 'home' %}">Home</a>
+        <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+        <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+        <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+        <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
+        <!-- <a class="mr-5 hover:text-white">About Us</a>
+        <a class="mr-5 hover:text-white">Contact</a> -->
 
-  <div id="particle-js"></div>
+      </nav>
+      <!-- HTML !-->
+    </div>
+  </header>
 
-  <div class="lcard">
-    <img src="https://codequotient.com/blog/wp-content/uploads/2022/01/Tech-Interview-Skills-101.jpg" alt="Card Image">
-    <h2>Card 1</h2>
-    <p>This is card.</p>
-  </div>
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+        <h1 class="text-2xl font-medium title-font mb-4 text-white text-center tracking-widest md:mb-6 lg:text-3xlmb-4 text-center text-2xl font-bold">Interview Section</h1>
+        <img alt="feature" class="object-cover object-center h-full w-full" src="https://cdn.dribbble.com/users/2759825/screenshots/11653908/media/4d88e1efa006716b89101914751bf4ed.gif">
+      </div>
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-white text-lg title-font font-medium mb-3">Shooting Stars</h2>
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-white text-lg title-font font-medium mb-3">The Catalyzer</h2>
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col mb-10 lg:items-start items-center">
+          <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="flex-grow">
+            <h2 class="text-white text-lg title-font font-medium mb-3">Neptune</h2>
+            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider-css relative container px-5 py-24 mx-auto">
+      <div class="bg-white py-6 sm:py-8 lg:py-12 bg-gray-900 ">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 ">
+          <!-- text - start -->
+          <div class="mb-10 md:mb-16">
+            <h2 class="mb-4 text-center text-2xl font-bold md:mb-6 lg:text-3xl text-white">Collections</h2>
+      
+            <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+          </div>
+          <!-- text - end -->
+      
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- product - start -->
+            <a href="#" class="group relative flex h-80 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+              <img src="https://i.pinimg.com/originals/e0/58/ee/e058eecc0652ff38a4e7062cfcf08c9d.gif" loading="lazy" alt="Photo by Fakurian Design" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+      
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+      
+              <div class="relative flex flex-col">
+                <span class="text-gray-300">Click Here 👇</span>
+                <span class="text-lg font-semibold text-white lg:text-xl">RoadMaps</span>
+              </div>
+            </a>
+            <!-- product - end -->
+      
+            <!-- product - start -->
+            <a href="{% url 'links' %}" class="group relative flex h-80 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+              <img src="https://www.ameba.com.uy/wp-content/uploads/2016/03/animacion-lobo-2.gif" loading="lazy" alt="Photo by Fakurian Design" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+      
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+      
+              <div class="relative flex flex-col">
+                <span class="text-gray-300">Click Here 👇 </span>
+                <span class="text-lg font-semibold text-white lg:text-xl">Explore the Study material</span>
+              </div>
+            </a>
+            <!-- product - end -->
+          </div>
+        </div>
+      </div>
+  </section>
 
-  <div class="lcard">
-    <img src="/static/img/roadmap.png" alt="Card Image">
-    <h2>RoadMaps</h2>
-    <p>Find the RoadMaps for your career</p>
-  </div>
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-  <div class="lcard">
+        <span class="ml-3 text-xl">LogiPlacement</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
+        @Logplacement —
+        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
+      </p>
 
-    <a href="{% url 'links' %}"><img src="/static/img/course.jpg" alt="Card Image"></a>
-    <h2>Links</h2>
-    <p>Explore the Study Material</p>
-  </div>
-
-  <script>
-
-    var lcards = document.querySelector(".lcard");
-
-    lcards.addEventListener("mouseover", () => {
-
-    });
-
-  </script>
-
-  <!-- particle js -->
-  <script src="particles.js"></script>
-  <script src="myjs.js"></script>
-
+    </div>
+  </footer>
 </body>
 
 </html>

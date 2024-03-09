@@ -18,7 +18,7 @@
   <header class="text-gray-400 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <span class="ml-3 text-xl" id="title1">Logiplacement</span>
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
         <a class="ml-5 mr-5 hover:text-white" href="{% url 'home' %}">Home</a>
@@ -43,11 +43,16 @@
 
         <p class="mb-6 text-xl leading-relaxed"><span class="auto-type"></span></p>
       </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img class="object-cover object-center" alt="hero"
-          src="https://az505806.vo.msecnd.net/cms/b7e9e2b0-9bc4-4a81-bbae-5ea2f4b97b64/9cf89d04-e931-46e7-8e30-95100886ec71-lg.jpg"
-          id="profile-pic">
+      <div class="mb-12 flex w-full md:mb-16 lg:w-2/3">
+        <div class="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
+          <img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/_964455_bloghero.gif" loading="lazy" alt="Photo by Kaung Htet" class="h-full w-full object-cover object-center" />
+        </div>
+
+        <div class="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+          <img src="https://images.unsplash.com/photo-1586295166487-b265f7e83a7f?auto=format&q=75&fit=crop&w=550&h=550" loading="lazy" alt="Photo by Manny Moreno" class="h-full w-full object-cover object-center" />
+        </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -68,7 +73,7 @@
                     tool</span> ! Let data guide your career path, predicting the best opportunities for your success.
                   Join now and pave the way to a brighter tomorrow.</p>
                 <div class="flex items-center flex-wrap ">
-                  <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                  <a  href='{% url 'prediction' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -91,7 +96,7 @@
                     id="course1">Professional Profile</span> with our expertly designed resumes. Stand out from the
                   crowd and land your dream job today!.</p>
                 <div class="flex items-center flex-wrap">
-                  <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                  <a href='{% url 'resumepage' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -114,7 +119,7 @@
                     id="course1">Beginner</span> to <span id="course2">Expect</span>, explore our curated courses and
                   master the latest skills. Start your tech evolution today!</p>
                 <div class="flex items-center flex-wrap ">
-                  <a class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                  <a href='{% url 'learning' %}' class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
