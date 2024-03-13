@@ -40,6 +40,9 @@ def links(request):
 def Signup(request):
     return render(request, "sign_up.html")
 
+def webdevelopment(request):
+    return render(request, "Web_Development.html")
+
 
 # def upload_resume(request):
 #     if request.method == "POST" and "uploadresume" in request.FILES:

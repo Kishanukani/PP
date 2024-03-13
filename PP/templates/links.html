@@ -6,84 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programming Links</title>
   {%load static%}
-  <link rel="stylesheet" href="{% static '/links.css' %}" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
 
   <!-- <link rel="stylesheet" href="links.css"> -->
 </head>
 
 <body>
-  <header>
-    <h1></h1>
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+        <a class="ml-5 mr-5 hover:text-white" href="{% url 'home' %}">Home</a>
+        <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+        <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+        <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+        <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
+        <!-- <a class="mr-5 hover:text-white">About Us</a>
+        <a class="mr-5 hover:text-white">Contact</a> -->
+
+      </nav>
+      <!-- HTML !-->
+    </div>
   </header>
-  <div id="particle-js"></div>
-  <div class="ccontainer" id="container">
-    <div class="ccard" id="web-development" onclick="showSection('web-development')">
-      <h2>Web Development</h2>
-      <p>Links related to web development...</p>
-      <a href="#">Explore</a>
+  <section class="text-gray-600 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap w-full mb-20">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white ">Explore the Study material 👇</h1>
+          <div class="h-1 w-20 mt-7 bg-indigo-500 rounded"></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-center mb-6" src="https://webcoder.co.in/wp-content/uploads/2021/04/website.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">Resources</h3>
+            <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3">Web Development</h2>
+            <p class="text-white leading-relaxed text-base">Unleash your website's <span id="course1">potential with our expert web development solutions</span>. Where innovation meets functionality, your digital journey begins.</p>
+            <div class="flex items-center flex-wrap mt-4">
+                  <a href='{% url 'webdevelopment' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+          </div>
+          
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://storage.googleapis.com/gweb-cloudblog-publish/original_images/MLOps_Kloeckner_Hero_Banner_1920x946.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">Resources</h3>
+            <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Data Science</h2>
+            <p class="text-white leading-relaxed text-base">Elevate your insights with <span id="course1">data science mastery</span>. Uncover patterns, make informed decisions, and redefine possibilities. Explore the power of data. </p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='{% url 'resumepage' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1358/0*4aHRjVXRKsyUhm2b" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">Resources</h3>
+            <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Machine Learning</h2>
+            <p class="text-white leading-relaxed text-base">Dive into the <span id="course1">realm of possibilities with our machine learning expertise</span>. Where algorithms pave the way for your data-driven success story.</p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='{% url 'resumepage' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://laughingsquid.com/wp-content/uploads/2014/05/basicgif2.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">Resources</h3>
+            <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Programming languages</h2>
+            <p class="text-white leading-relaxed text-base">Elevate your <span id="course1">code game with our programming language expertise</span>. Where innovation meets precision, your digital solutions thrive.</p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='{% url 'resumepage' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="xl:w-1/4 md:w-1/2 p-4">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://visme.co/blog/wp-content/uploads/2020/02/header.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">Resources</h3>
+            <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Mobile Application</h2>
+            <p class="text-white leading-relaxed text-base">Transforming ideas<span id="course1"> into mobile marvels</span>. Where innovation and user experience converge, your app journey begins.</p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='{% url 'resumepage' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-    <div class="ccard" id="mobile-development" onclick="showSection('mobile-development')">
-      <h2>Mobile Development</h2>
-      <p>Links related to mobile development...</p>
-      <a href="#">Explore</a>
+        <span class="ml-3 text-xl">LogiPlacement</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
+        @Logplacement —
+        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
+      </p>
+
     </div>
-
-    <div class="ccard" id="data-science" onclick="showSection('data-science')">
-      <h2>Data Science</h2>
-      <p>Links related to data science...</p>
-      <a href="#">Explore</a>
-    </div>
-
-    <div class="ccard" id="machine-learning" onclick="showSection('machine-learning')">
-      <h2>Machine Learning</h2>
-      <p>Links related to machine learning...</p>
-      <a href="#">Explore</a>
-    </div>
-
-    <div class="ccard" id="programming-languages" onclick="showSection('programming-languages')">
-      <h2>Programming Languages</h2>
-      <p>Links related to various programming languages...</p>
-      <a href="#">Explore</a>
-    </div>
-  </div>
-
-  <div class="go-back" id="go-back" style="display: none;">
-    <a href="links.html" onclick="goBack()">Go back</a>
-  </div>
-
-  <script>
-    function showSection(sectionId) {
-      // Hide the container
-      document.getElementById('container').style.display = 'none';
-
-      // Show the selected section
-      var selectedSection = document.getElementById(sectionId);
-      selectedSection.style.display = 'block';
-
-      // Show the "Go back" link
-      document.getElementById('go-back').style.display = 'block';
-    }
-
-    function goBack() {
-      // Hide the current section
-      var sections = document.querySelectorAll('.ccard');
-      sections.forEach(function (section) {
-        section.style.display = 'none';
-      });
-
-      // Show the container
-      document.getElementById('container').style.display = 'flex';
-
-      // Hide the "Go back" link
-      document.getElementById('go-back').style.display = 'none';
-    }
-  </script>
-
-  <!-- particle js -->
-  <script src="particles.js"></script>
-  <script src="myjs.js"></script>
-
+  </footer>
 </body>
 
 </html>
