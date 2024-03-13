@@ -13,6 +13,7 @@ urlpatterns = [
     path("webdevelopment", views.webdevelopment, name="webdevelopment"),
     path("machinelearning", views.machinelearning, name="machinelearning"),
     path("datascience", views.datascience, name="datascience"),
+    path("mobileapplication", views.mobileapplication, name="mobileapplication"),
     path("programinglanguage", views.programinglanguage, name="programinglanguage"),
     path("index/", views.index, name="index"),
     path("signup/", views.signup, name="signup"),

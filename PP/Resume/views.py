@@ -52,6 +52,9 @@ def datascience(request):
 def programinglanguage(request):
     return render(request, "Programming_Language.html")
 
+def mobileapplication(request):
+    return render(request, "Mobile_Application.html")
+
 # def upload_resume(request):
 #     if request.method == "POST" and "uploadresume" in request.FILES:
 #         upload_resume = request.FILES["uploadresume"]
