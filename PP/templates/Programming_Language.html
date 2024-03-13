@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Language</title>
+  {%load static%}
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
+
+  <!-- <link rel="stylesheet" href="links.css"> -->
+</head>
+
+<body>
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+        <a class="ml-5 mr-5 hover:text-white" href="{% url 'home' %}">Home</a>
+        <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+        <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+        <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+        <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
+        <!-- <a class="mr-5 hover:text-white">About Us</a>
+        <a class="mr-5 hover:text-white">Contact</a> -->
+
+      </nav>
+      <!-- HTML !-->
+    </div>
+  </header>
+
+  <section class="text-gray-600 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white ">Programming Language Playlist 👇</h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+        <div class="section-divider-css relative container mt-4 px-5 py-24 mx-auto">
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <iframe class="w-full object-cover h-full object-center block" src="https://www.youtube.com/embed/jaNl7lHq6lI?si=ID-l68jyvBlr5bKH&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <iframe class="w-full object-cover h-full object-center block" src="https://www.youtube.com/embed/yRpLlJmRo2w?si=daRc6qfzNHeX9OXZ&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <iframe width="740" height="400" src="https://www.youtube.com/embed/u1RKh1kQqaE?si=mKXaZ_Ii7ZsnzM3T&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <iframe width="740" height="400" src="https://www.youtube.com/embed/1z5-O7-5AXk?si=imOoOJqGsMUvfIRa&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <iframe class="w-full object-cover h-full object-center block" src="https://www.youtube.com/embed/rZ41y93P2Qo?si=_KUdy-D_X3sO6ubg&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <iframe class="w-full object-cover h-full object-center block" src="https://www.youtube.com/embed/z9bZufPHFLU?si=cW18m0Uc_mSTEpPN&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-gray-600 bg-gray-900 body-font">
+    
+    <div class="container px-3  mx-auto">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20">
+              <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Programming Language GitHub Projects 👇</h1>
+              </div>
+              <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+              <div class="section-divider-css relative container mt-4 px-5 py-24 mx-auto">
+            </div>
+      <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://res.cloudinary.com/practicaldev/image/fetch/s--67DwkHWN--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ahd7kxkv389pw171tyy5.gif">
+          </div>
+          <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-6 mb-3">Begineer To Expert!</h2>
+          <p class="leading-relaxed text-base">Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch, slow-carb neutra irony.</p>
+          <a href='https://github.com/practical-tutorials/project-based-learning'>
+          <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded" href="">Project :)</button>
+          </a>
+        </div>
+        <div class="sm:w-1/2 mb-10 px-4">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://i.makeagif.com/media/4-25-2019/SSrPIH.gif">
+          </div>
+          <h2 class="title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-6 mb-3">Projects Directory</h2>
+          <p class="leading-relaxed text-base">Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch, slow-carb neutra irony.</p>
+          <a href='https://github.com/collections/programming-languages'>
+            <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded" href="">Projects :)</button>
+            </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+
+        <span class="ml-3 text-xl">LogiPlacement</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
+        @Logplacement —
+        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
+      </p>
+
+    </div>
+  </footer>
+</body>
+
+</html>
