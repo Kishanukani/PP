@@ -43,6 +43,14 @@ def Signup(request):
 def webdevelopment(request):
     return render(request, "Web_Development.html")
 
+def machinelearning(request):
+    return render(request, "Machine_Learning.html")
+
+def datascience(request):
+    return render(request, "Data_Science.html")
+
+def programinglanguage(request):
+    return render(request, "Programming_Language.html")
 
 # def upload_resume(request):
 #     if request.method == "POST" and "uploadresume" in request.FILES:
