@@ -10,6 +10,7 @@ urlpatterns = [
     path("placementprediction/", views.placementprediction, name="placementprediction"),
     path("learning", views.learning, name="learning"),
     path("links", views.links, name="links"),
+    path("roadmap", views.roadmap, name="roadmap"),
     path("webdevelopment", views.webdevelopment, name="webdevelopment"),
     path("machinelearning", views.machinelearning, name="machinelearning"),
     path("datascience", views.datascience, name="datascience"),

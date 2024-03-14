@@ -55,6 +55,10 @@ def programinglanguage(request):
 def mobileapplication(request):
     return render(request, "Mobile_Application.html")
 
+def roadmap(request):
+    return render(request, "Roadmap.html")
+
+
 # def upload_resume(request):
 #     if request.method == "POST" and "uploadresume" in request.FILES:
 #         upload_resume = request.FILES["uploadresume"]
