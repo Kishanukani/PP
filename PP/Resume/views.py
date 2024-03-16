@@ -14,11 +14,11 @@ from django.contrib.auth import authenticate, login
 
 
 def landingpage(request):
-    return render(request, "landingpage.html")
+    return render(request, "index2.html")
 
 
 def welcome(request):
-    return render(request, "index2.html")
+    return render(request, "landingpage.html")
 
 
 def index(request):
@@ -195,7 +195,7 @@ def Login_process(request):
 
         if user is not None:
             login(request, user)
-            return redirect("home")
+            return redirect("landingpage")
 
         else:
             return HttpResponse("Username and Password are incorrect")
