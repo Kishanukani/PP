@@ -13,6 +13,10 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
 
+def landingpage(request):
+    return render(request, "landingpage.html")
+
+
 def welcome(request):
     return render(request, "index2.html")
 
@@ -40,20 +44,26 @@ def links(request):
 def Signup(request):
     return render(request, "sign_up.html")
 
+
 def webdevelopment(request):
     return render(request, "Web_Development.html")
+
 
 def machinelearning(request):
     return render(request, "Machine_Learning.html")
 
+
 def datascience(request):
     return render(request, "Data_Science.html")
+
 
 def programinglanguage(request):
     return render(request, "Programming_Language.html")
 
+
 def mobileapplication(request):
     return render(request, "Mobile_Application.html")
+
 
 def roadmap(request):
     return render(request, "Roadmap.html")

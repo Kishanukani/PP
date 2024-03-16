@@ -1,0 +1,111 @@
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    /* display: flex; */
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0%;
+}
+
+.overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.draw-effect {
+    overflow: hidden;
+    height: 150px; /* Adjust size as needed */
+    width: 150px; /* Adjust size as needed */
+    position: relative;
+    animation: bounce 2s ease infinite, fadeInOut 4s ease infinite;
+}
+
+.draw-effect img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7)); /* Apply drop shadow to the image */
+}
+.draw-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    animation: draw 2s linear infinite;
+}
+
+@keyframes draw {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#exp:hover{
+    animation: bouncebutton ease-in-out 1.5s infinite alternate;
+    cursor: pointer;
+}
+@keyframes bouncebutton {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-10px);
+  }
+}
+.bounce {
+  animation: bounceAnimation ease-in-out 1s 6 alternate ;
+  /* box-shadow: 10px white; */
+
+  /* animation-iteration-count: 2; */
+}
+
+@keyframes bounceAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-30px);
+  }
+}
+ul li{
+    cursor: pointer;
+}
