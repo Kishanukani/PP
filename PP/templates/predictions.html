@@ -10,8 +10,17 @@
     <link rel="stylesheet" href="{% static '/final.css' %}" />
     {% comment %} {%load static%}{% endcomment %}
     <link rel="stylesheet" href="{% static '/preloader.css' %}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/final.css' %}" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
+        rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <!-- greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
 
 </head>
 
@@ -23,16 +32,17 @@
     <div class="hidden">
         <header class="text-gray-400 bg-gray-900 body-font">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                    <span class="ml-3 text-xl" id="title1">Logiplacement</span>
+                <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+                    href="{% url 'landingpage' %}">
+                    <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
                 </a>
                 <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
                     <a class="ml-5 mr-5 hover:text-white" href="{% url 'landingpage' %}">Home</a>
                     <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
                     <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
                     <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
-                    <a class="mr-5 hover:text-white">About Us</a>
-                    <a class="mr-5 hover:text-white">Contact</a>
+                    <!-- <a class="mr-5 hover:text-white">About Us</a>
+                    <a class="mr-5 hover:text-white">Contact</a> -->
                 </nav>
             </div>
         </header>
@@ -206,7 +216,7 @@
                                     min="0.00" max="5.00" oninput="validity.valid||(value='');">
                             </div>
 
-                            <input type='submit' value='Submit'
+                            <input type='submit' value='Submit' id="sbbtn"
                                 class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                         </form>
                     </div>
@@ -215,6 +225,7 @@
                     <h1 style="color: white;font-size: 80px;">Result of prediction is {{result}}</h1>
                     {%endif%}
         </section>
+
 
 
 

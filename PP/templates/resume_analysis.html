@@ -6,9 +6,32 @@
   <title>Resume Analysis</title>
   {% load static %}
   <link rel="stylesheet" href="{% static '/resumeanalysis.css' %}" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
+    rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 
 <body>
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="{% url 'landingpage' %}">
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+        <a class="ml-5 mr-5 hover:text-white" href="{% url 'landingpage' %}">Home</a>
+        <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+        <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+        <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+
+      </nav>
+      <!-- HTML !-->
+    </div>
+  </header>
   <!-- pdf viewer -->
   <div id="container1">
     <div class="child1">

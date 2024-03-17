@@ -16,7 +16,7 @@
 <body>
   <header class="text-gray-400 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="{% url 'landingpage' %}">
         <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
@@ -24,7 +24,7 @@
         <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
         <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
         <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
-        <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
+        <!-- <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a> -->
         <!-- <a class="mr-5 hover:text-white">About Us</a>
         <a class="mr-5 hover:text-white">Contact</a> -->
 
@@ -32,42 +32,57 @@
       <!-- HTML !-->
     </div>
   </header>
-  
+
   <section class="text-gray-600 bg-gray-900 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20">
         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect <span class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse"> Development Field</span> RoadMaps 👇</h1>
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect
+            <span
+              class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse">
+              Development Field</span> RoadMaps 👇
+          </h1>
           <div class="h-1 w-20 mt-7 bg-indigo-500 rounded"></div>
         </div>
       </div>
       <div class="flex flex-wrap -m-4 ">
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-center mb-6" src="https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/front-end-development.gif" alt="content">
+            <img class="h-40 rounded w-full object-center mb-6"
+              src="https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/front-end-development.gif"
+              alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">Front-End</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a modern frontend developes</span>.</p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+              Front-End</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a modern
+                frontend developes</span>.</p>
             <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/frontend'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
+              <a href='https://roadmap.sh/frontend'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-          
+
         </div>
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1400/1*H0CTa4XarcrKNQsmoeFrzg.gif" alt="content">
+            <img class="h-40 rounded w-full object-cover object-center mb-6"
+              src="https://miro.medium.com/v2/resize:fit:1400/1*H0CTa4XarcrKNQsmoeFrzg.gif" alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Back-End</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a modern backend developer</span>. </p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+              Back-End</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a modern
+                backend developer</span>. </p>
             <div class="flex items-center flex-wrap mt-4">
-              <a href='https://roadmap.sh/backend'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+              <a href='https://roadmap.sh/backend'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
@@ -77,15 +92,20 @@
             </div>
           </div>
         </div>
-        
+
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1358/1*DluPjzT_eTUFdzHCI7JBZA.gif" alt="content">
+            <img class="h-40 rounded w-full object-cover object-center mb-6"
+              src="https://miro.medium.com/v2/resize:fit:1358/1*DluPjzT_eTUFdzHCI7JBZA.gif" alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">DevOps Roadmap</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> for DevOps, SRE or any other Operations Role</span>.</p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+              DevOps Roadmap</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> for DevOps, SRE or
+                any other Operations Role</span>.</p>
             <div class="flex items-center flex-wrap mt-4">
-              <a href='https://roadmap.sh/devops'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+              <a href='https://roadmap.sh/devops'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
@@ -96,61 +116,80 @@
           </div>
         </div>
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
-            <div class="bg-gray-800 p-6 rounded-lg">
-              <img class="h-40 rounded w-full object-center mb-6" src="https://miro.medium.com/v2/resize:fit:679/1*yw0TnheAGN-LPneDaTlaxw.gif" alt="content">
-              <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-              <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">Full Stack Developer</h2>
-              <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a modern full stack developer</span>.</p>
-              <div class="flex items-center flex-wrap mt-4">
-                    <a href='https://roadmap.sh/full-stack'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-center mb-6"
+              src="https://miro.medium.com/v2/resize:fit:679/1*yw0TnheAGN-LPneDaTlaxw.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+              Full Stack Developer</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a modern
+                full stack developer</span>.</p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='https://roadmap.sh/full-stack'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
-        
+          </div>
+
+        </div>
       </div>
-    </div>
   </section>
 
   <section class="text-gray-600 bg-gray-900 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20">
         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect <span class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse">Mobile Application</span> RoadMaps 👇</h1>
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect
+            <span
+              class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse">Mobile
+              Application</span> RoadMaps 👇
+          </h1>
           <div class="h-1 w-20 mt-7 bg-indigo-500 rounded"></div>
         </div>
       </div>
       <div class="flex flex-wrap -m-4 ">
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-center mb-6" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Qblock.gif" alt="content">
+            <img class="h-40 rounded w-full object-center mb-6"
+              src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Qblock.gif" alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">Android Developer</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming  an Android developer</span>.</p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+              Android Developer</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming an Android
+                developer</span>.</p>
             <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/android'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
+              <a href='https://roadmap.sh/android'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-          
+
         </div>
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://www.websutility.com/new_images/flutter-app-course.gif" alt="content">
+            <img class="h-40 rounded w-full object-cover object-center mb-6"
+              src="https://www.websutility.com/new_images/flutter-app-course.gif" alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Flutter Developer</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a Flutter Developer</span>. </p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+              Flutter Developer</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a Flutter
+                Developer</span>. </p>
             <div class="flex items-center flex-wrap mt-4">
-              <a href='https://roadmap.sh/flutter'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+              <a href='https://roadmap.sh/flutter'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
@@ -160,15 +199,20 @@
             </div>
           </div>
         </div>
-        
+
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
           <div class="bg-gray-800 p-6 rounded-lg">
-            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1358/1*a-HMmQFQNC76zCZBZfFgJg.gif" alt="content">
+            <img class="h-40 rounded w-full object-cover object-center mb-6"
+              src="https://miro.medium.com/v2/resize:fit:1358/1*a-HMmQFQNC76zCZBZfFgJg.gif" alt="content">
             <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-            <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">React Native Developer</h2>
-            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> tp becoming a React Native Developer</span>.</p>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+              React Native Developer</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> tp becoming a React
+                Native Developer</span>.</p>
             <div class="flex items-center flex-wrap mt-4">
-              <a href='{% url 'machinelearning' %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+              <a href='{% url ' machinelearning'
+                %}'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                   stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
@@ -179,60 +223,80 @@
           </div>
         </div>
         <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
-            <div class="bg-gray-800 p-6 rounded-lg">
-              <img class="h-40 rounded w-full object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1400/0*Nhg8AJuT6zfAuFKS.gif" alt="content">
-              <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-              <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">UX Design</h2>
-              <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a UX Designer</span>.</p>
-              <div class="flex items-center flex-wrap mt-4">
-                    <a href='https://roadmap.sh/ux-design'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-center mb-6"
+              src="https://miro.medium.com/v2/resize:fit:1400/0*Nhg8AJuT6zfAuFKS.gif" alt="content">
+            <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
+            <h2
+              class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+              UX Design</h2>
+            <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming a UX
+                Designer</span>.</p>
+            <div class="flex items-center flex-wrap mt-4">
+              <a href='https://roadmap.sh/ux-design'
+                class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
-        
+          </div>
+
+        </div>
       </div>
-    </div>
-    
-    <section class="text-gray-600 bg-gray-900 body-font">
+
+      <section class="text-gray-600 bg-gray-900 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap w-full mb-20">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect <span class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse"> AI and Data Scientist</span> RoadMaps👇</h1>
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect
+                <span
+                  class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse">
+                  AI and Data Scientist</span> RoadMaps👇
+              </h1>
               <div class="h-1 w-20 mt-7 bg-indigo-500 rounded"></div>
             </div>
           </div>
           <div class="flex flex-wrap -m-4 ">
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-center mb-6" src="https://static.wixstatic.com/media/93164c_1fc67c85834441eaaf12c5cdd8b92919~mv2.gif" alt="content">
+                <img class="h-40 rounded w-full object-center mb-6"
+                  src="https://static.wixstatic.com/media/93164c_1fc67c85834441eaaf12c5cdd8b92919~mv2.gif"
+                  alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">AI and Data Scientist</h2>
-                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming an AI and Data Scientist</span>.</p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+                  AI and Data Scientist</h2>
+                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming an AI
+                    and Data Scientist</span>.</p>
                 <div class="flex items-center flex-wrap mt-4">
-                      <a href='https://roadmap.sh/ai-data-scientist'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                          stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                    </div>
+                  <a href='https://roadmap.sh/ai-data-scientist'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
-              
+
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif" alt="content">
+                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                  src="https://cdn.dribbble.com/users/926537/screenshots/4502924/python-2.gif" alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Python Developer</h2>
-                <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a Python Developerr</span>. </p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+                  Python Developer</h2>
+                <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a
+                    Python Developerr</span>. </p>
                 <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/python'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                  <a href='https://roadmap.sh/python'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -242,15 +306,20 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://editor.analyticsvidhya.com/uploads/36882wired1.gif" alt="content">
+                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                  src="https://editor.analyticsvidhya.com/uploads/36882wired1.gif" alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">SQL Developer</h2>
-                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> to becoming a SQL Developer</span>.</p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+                  SQL Developer</h2>
+                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1"> to becoming a SQL
+                    Developer</span>.</p>
                 <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/sql'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                  <a href='https://roadmap.sh/sql'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -260,44 +329,59 @@
                 </div>
               </div>
             </div>
-        </div>
+          </div>
       </section>
- 
+
       <section class="text-gray-600 bg-gray-900 body-font">
         <div class="container px-8 py-24 mx-auto">
           <div class="flex flex-wrap w-full mb-20">
             <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect <span class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse"> Skill Based</span> RoadMaps👇</h1>
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white animate-bounce ">Begineer to Expect
+                <span
+                  class="bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text font-bold animate-pulse">
+                  Skill Based</span> RoadMaps👇
+              </h1>
               <div class="h-1 w-20 mt-7 bg-indigo-500 rounded"></div>
             </div>
           </div>
           <div class="flex flex-wrap -m-4 ">
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-center mb-6" src="https://tuhdo.github.io/static/c-ide/projectile-find-other-file.gif" alt="content">
+                <img class="h-40 rounded w-full object-center mb-6"
+                  src="https://tuhdo.github.io/static/c-ide/projectile-find-other-file.gif" alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">C++ Developer</h2>
-                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming an C++ Developer</span>.</p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mt-2 mb-3 ">
+                  C++ Developer</h2>
+                <p class="text-white leading-relaxed text-base">Step by step guide <span id="course1">to becoming an C++
+                    Developer</span>.</p>
                 <div class="flex items-center flex-wrap mt-4">
-                      <a href='https://roadmap.sh/cpp'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
-                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                          stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                    </div>
+                  <a href='https://roadmap.sh/cpp'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
-              
+
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://media.licdn.com/dms/image/D4D22AQECDJx04fX84g/feedshare-shrink_2048_1536/0/1687210352510?e=2147483647&v=beta&t=NDbj7ISv_ULUYoLfvR5VK_LF9eAD6xc57pOyZt6CKWQ" alt="content">
+                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                  src="https://media.licdn.com/dms/image/D4D22AQECDJx04fX84g/feedshare-shrink_2048_1536/0/1687210352510?e=2147483647&v=beta&t=NDbj7ISv_ULUYoLfvR5VK_LF9eAD6xc57pOyZt6CKWQ"
+                  alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Java Developer</h2>
-                <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a Java Developer</span>. </p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+                  Java Developer</h2>
+                <p class="text-white leading-relaxed text-base">Step by step guide<span id="course1"> to becoming a Java
+                    Developer</span>. </p>
                 <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/java'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                  <a href='https://roadmap.sh/java'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -307,15 +391,20 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:996/1*um19N_oeTKlmrHMov0O5bA.gif" alt="content">
+                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                  src="https://miro.medium.com/v2/resize:fit:996/1*um19N_oeTKlmrHMov0O5bA.gif" alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">Data Structures & Algorithms</h2>
-                <p class="text-white leading-relaxed text-base">guide to learn <span id="course1"> Data Structures & Algorithms</span>.</p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+                  Data Structures & Algorithms</h2>
+                <p class="text-white leading-relaxed text-base">guide to learn <span id="course1"> Data Structures &
+                    Algorithms</span>.</p>
                 <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/datastructures-and-algorithms'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                  <a href='https://roadmap.sh/datastructures-and-algorithms'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -327,12 +416,17 @@
             </div>
             <div class="xl:w-1/4 md:w-1/2 p-4 transform transition-transform hover:rotate-6 hover:shadow-xl ">
               <div class="bg-gray-800 p-6 rounded-lg">
-                <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://opensource.com/sites/default/files/uploads/react.gif" alt="content">
+                <img class="h-40 rounded w-full object-cover object-center mb-6"
+                  src="https://opensource.com/sites/default/files/uploads/react.gif" alt="content">
                 <h3 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">RoadMaps</h3>
-                <h2 class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">React Developer</h2>
-                <p class="text-white leading-relaxed text-base">Everything that is there<span id="course1"> to learn about React </span>.and the ecosystem</p>
+                <h2
+                  class="animate-pulse title-font text-2xl font-medium bg-gradient-to-r from-red-500 to-yellow-600 text-transparent bg-clip-text mb-3">
+                  React Developer</h2>
+                <p class="text-white leading-relaxed text-base">Everything that is there<span id="course1"> to learn
+                    about React </span>.and the ecosystem</p>
                 <div class="flex items-center flex-wrap mt-4">
-                  <a href='https://roadmap.sh/react'class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
+                  <a href='https://roadmap.sh/react'
+                    class="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">RoadMap link
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                       stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
@@ -342,23 +436,24 @@
                 </div>
               </div>
             </div>
-        </div>
+          </div>
       </section>
- 
-  <footer class="text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-        <span class="ml-3 text-xl">LogiPlacement</span>
-      </a>
-      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
-        @Logplacement —
-        <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
-          Comp</a>
-      </p>
+      <footer class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-    </div>
-  </footer>
+            <span class="ml-3 text-xl">LogiPlacement</span>
+          </a>
+          <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
+            @Logplacement —
+            <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank"
+              rel="noopener noreferrer">BE
+              Comp</a>
+          </p>
+
+        </div>
+      </footer>
 </body>
 
 </html>
