@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* background-color: #000; */
-    background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+    background-color: #111827;
     color: #fff;
 }
 
@@ -11,6 +11,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    
 }
 
 /* navbar */
