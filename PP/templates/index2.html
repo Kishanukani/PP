@@ -24,11 +24,13 @@
         <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
         <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
         <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
-        <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a>
         <a class="mr-5 hover:text-white" href="#" onclick="scrollToSection('aboutUs')">About Us</a>
         <a class="mr-5 hover:text-white" href="#" onclick="scrollToSection('contact')">Contact</a>
-
       </nav>
+      <a href="{% url 'logout' %}">
+      <button class="ml-100 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Logout</button></a>
+    </div>
+    
       <!-- HTML !-->
     </div>
   </header>

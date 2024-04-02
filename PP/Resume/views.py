@@ -4,13 +4,14 @@ from django.shortcuts import render
 from django.conf import settings
 from firebase_admin import storage
 
+
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from firebase_admin import storage
 
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 
 
 def landingpage(request):
@@ -203,3 +204,7 @@ def Login_process(request):
         else:
             return HttpResponse("Username and Password are incorrect")
     return render(request, "signup.html")
+
+def logout_process(request):
+    logout(request)
+    return redirect("home")

@@ -20,6 +20,7 @@ urlpatterns = [
     path("index/", views.index, name="index"),
     path("signup/", views.signup, name="signup"),
     path("login/", views.Login_process, name="login"),
+    path('logout/', views.logout_process, name='logout'),
     path("resumepage/upload_resume/", views.upload_resume, name="upload_resume"),
     # path("list_resumes", views.list_resumes, name="list_resumes"),
     path("resume_download", views.list_resumes, name="resume_download"),
