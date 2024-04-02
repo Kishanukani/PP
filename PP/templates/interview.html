@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Questions</title>
+  {%load static%}
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static '/final.css' %}" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!--Header-->
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="{% url 'landingpage' %}">
+        <span class="ml-3 text-2xl" id="title1">Logiplacement</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex items-center text-base justify-center gap-5">
+        <a class="ml-5 mr-5 hover:text-white" href="{% url 'landingpage' %}">Home</a>
+        <a class="mr-5 hover:text-white" href="{% url 'prediction' %}">Prediction</a>
+        <a class="mr-5 hover:text-white" href="{% url 'resumepage' %}">Resume</a>
+        <a class="mr-5 hover:text-white" href="{% url 'learning' %}">Learning</a>
+        <!-- <a class="mr-5 hover:text-white" href="{% url 'signup' %}">signup</a> -->
+        <!-- <a class="mr-5 hover:text-white">About Us</a>
+        <a class="mr-5 hover:text-white">Contact</a> -->
+
+      </nav>
+      <!-- HTML !-->
+    </div>
+  </header>
+  <div class="bg-gray-900 py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <div class="mb-6 flex items-end justify-between gap-4">
+        <h2 class="text-2xl font-bold text-white lg:text-3xl animate-bounce">Collections</h2>
+  
+        <a href="#" class="inline-block rounded-lg border bg-white px-4 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">Show more</a>
+      </div>
+  
+      <div class="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
+            <img src="https://miro.medium.com/v2/resize:fit:800/1*zzTEyTwyy7jXibtqVWg84Q.gif" loading="lazy" alt="Photo by Austin Wade" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+          </a>
+  
+          <div class="flex flex-col">
+            <span class="text-gray-500">Questions</span>
+            <a href="https://www.durgasoft.com/android%20interview%20questions.pdf" class="text-lg font-bold text-yellow-400 transition duration-100 hover:text-white lg:text-xl">Android Development</a>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
+            <img src="https://govtech.cloud/assets/images/GTC_Img/Home/10-Must-Know-Cloud-Computing-Facts-of-2020.gif" loading="lazy" alt="Photo by engin akyurt" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+          </a>
+  
+          <div class="flex flex-col">
+            <span class="text-gray-500">Women</span>
+            <a href="#" class="text-lg font-bold text-yellow-400 transition duration-100  hover:text-white lg:text-xl">Summer Season</a>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
+            <img src="https://images.unsplash.com/photo-1552668693-d0738e00eca8?auto=format&q=75&fit=crop&crop=top&w=600&h=700" loading="lazy" alt="Photo by Austin Wade" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+          </a>
+  
+          <div class="flex flex-col">
+            <span class="text-gray-500">Men</span>
+            <a href="#" class="text-lg font-bold text-yellow-400 transition duration-100  hover:text-white lg:text-xl">Streetwear</a>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3">
+            <img src="https://images.unsplash.com/photo-1560269999-cef6ebd23ad3?auto=format&q=75&fit=crop&w=600&h=700" loading="lazy" alt="Photo by Austin Wade" class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+          </a>
+  
+          <div class="flex flex-col">
+            <span class="text-gray-500">Women</span>
+            <a href="#" class="text-lg font-bold text-yellow-400 transition duration-100  hover:text-white lg:text-xl">Sale</a>
+          </div>
+        </div>
+        <!-- product - end -->
+      </div>
+    </div>
+  </div>
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+
+        <span class="ml-3 text-xl">LogiPlacement</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
+        @Logplacement —
+        <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
+      </p>
+
+    </div>
+  </footer>
+</body>
+
+</html>

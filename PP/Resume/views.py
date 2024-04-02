@@ -68,6 +68,9 @@ def mobileapplication(request):
 def roadmap(request):
     return render(request, "Roadmap.html")
 
+def interview(request):
+    return render(request, "interview.html")
+
 
 # def upload_resume(request):
 #     if request.method == "POST" and "uploadresume" in request.FILES:
