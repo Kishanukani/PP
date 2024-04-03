@@ -3,7 +3,8 @@ from joblib import load
 import numpy as np
 
 # Load the machine learning model
-model = load("./savedmodels/model.joblib")
+# model = load("./savedmodels/model.joblib")
+model = load("./savedmodels/rf.joblib")
 
 
 def prediction(request):
@@ -33,13 +34,34 @@ def prediction(request):
         y_pred = model.predict(input_data)
 
         # Perform logic based on prediction
-        if y_pred > 1 and HistoryOfBacklogs == 0 and Internships >= 2:
+        if y_pred >= 1 and HistoryOfBacklogs == 0 and Internships >= 2:
             result = "Placed"
         elif 0.6 < y_pred < 1 and HistoryOfBacklogs == 0:
             result = "Maybe Placed"
         else:
             result = "Not Placed"
 
-        return render(request, "predictions.html", {"result": result})
+        if HistoryOfBacklogs > 0:
+            backans = "WE recommend you to clear all the backlogs "
+
+        if Internships < 2:
+            Internshipsans = "WE recommend you to increase number of internships"
+
+        # if CGPA < 6.0:
+        #     cgpaans = (
+        #         "WE recommend you to try increase your CGPA for campus opportunities "
+        #     )
+
+        return render(
+            request,
+            "predictions.html",
+            {
+                "result": result,
+                "ans": y_pred,
+                "backans": backans,
+                "internshipsans": Internshipsans,
+                # "cgpans": cgpaans,
+            },
+        )
 
     return render(request, "predictions.html")

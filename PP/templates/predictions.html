@@ -58,8 +58,10 @@
                                 </svg>
                             </div>
                             <div class="flex-grow pl-4">
-                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 1 : <span class="animate-pulse text-yellow-300">Data Collection</span> </h2>
-                                <p class="leading-relaxed">Gathered student data including Age, Gender, Stream, Internships, CGPA, Hostel Stay, and Backlogs.</p>
+                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 1 : <span
+                                        class="animate-pulse text-yellow-300">Data Collection</span> </h2>
+                                <p class="leading-relaxed">Gathered student data including Age, Gender, Stream,
+                                    Internships, CGPA, Hostel Stay, and Backlogs.</p>
                             </div>
                         </div>
                         <div class="flex relative pb-12">
@@ -74,9 +76,11 @@
                                 </svg>
                             </div>
                             <div class="flex-grow pl-4">
-                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 2 :<span class="animate-pulse text-yellow-300"> Entities </span></h2>
+                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 2 :<span
+                                        class="animate-pulse text-yellow-300"> Entities </span></h2>
                                 <p class="leading-relaxed">Age, Gender, Stream: Basic student details.</p>
-                                <p class="leading-relaxed">Internships, CGPA, Hostel, Backlogs: Performance indicators.</p>
+                                <p class="leading-relaxed">Internships, CGPA, Hostel, Backlogs: Performance indicators.
+                                </p>
                             </div>
                         </div>
                         <div class="flex relative pb-12">
@@ -92,7 +96,8 @@
                                 </svg>
                             </div>
                             <div class="flex-grow pl-4">
-                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 3 :<span class="animate-pulse text-yellow-300"> Machine Learning Model Used</span></h2>
+                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 3 :<span
+                                        class="animate-pulse text-yellow-300"> Machine Learning Model Used</span></h2>
                                 <p class="leading-relaxed">Linear Regression for performance prediction.</p>
                             </div>
                         </div>
@@ -109,8 +114,10 @@
                                 </svg>
                             </div>
                             <div class="flex-grow pl-4">
-                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 4 :<span class="animate-pulse text-yellow-300"> Model Deployment </span></h2>
-                                <p class="leading-relaxed">The trained model is saved into a 'pickle' file, ready for deployment and use.</p>
+                                <h2 class="font-medium title-font text-xl text-white mb-1 tracking-wider">STEP 4 :<span
+                                        class="animate-pulse text-yellow-300"> Model Deployment </span></h2>
+                                <p class="leading-relaxed">The trained model is saved into a 'pickle' file, ready for
+                                    deployment and use.</p>
                             </div>
                         </div>
                         <div class="flex relative">
@@ -123,8 +130,12 @@
                                 </svg>
                             </div>
                             <div class="flex-grow pl-4">
-                                <h2 class="font-medium animate-pulse title-font text-xl text-yellow-300 mb-1 tracking-wider">FINISH</h2>
-                                <p class="leading-relaxed">Upon submitting the form with the student's details, the model predicts and displays the expected outcome, providing insights into the student's performance. As will be "Placed" "Maybe Placed" or "Not Placed"</p>
+                                <h2
+                                    class="font-medium animate-pulse title-font text-xl text-yellow-300 mb-1 tracking-wider">
+                                    FINISH</h2>
+                                <p class="leading-relaxed">Upon submitting the form with the student's details, the
+                                    model predicts and displays the expected outcome, providing insights into the
+                                    student's performance. As will be "Placed" "Maybe Placed" or "Not Placed"</p>
                             </div>
                         </div>
                     </div>
@@ -199,7 +210,11 @@
                     </div>
                     {%if result%}
 
-                    <h1 style="color: white;font-size: 80px; margin-top:10px;">Result of prediction is {{result}}</h1>
+                    <h1 style="color: white;font-size: 80px; margin-top:10px;">Result of prediction is {{result}} with
+                        value {{ans}}</h1>
+                    <h2>{{backans}}</h2><br>
+                    <h2>{{internshipsans}}</h2><br>
+                    <h2>{{cgpans}}</h2>
                     {%endif%}
         </section>
 
@@ -250,25 +265,26 @@
 
         {%if result%}
 
-        <h1>Result of prediction is {{result}}</h1>
+        <h1>Result of prediction is {{result}} with value {{ans}}</h1>
         {%endif%} {% endcomment %}
 
 
         <!--Footer-->
         <footer class="text-gray-400 bg-gray-900 body-font">
             <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-              <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-        
-                <span class="ml-3 text-xl">LogiPlacement</span>
-              </a>
-              <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024
-                @Logplacement —
-                <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
-                  Comp</a>
-              </p>
-        
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+
+                    <span class="ml-3 text-xl">LogiPlacement</span>
+                </a>
+                <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
+                    2024
+                    @Logplacement —
+                    <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+                        Comp</a>
+                </p>
+
             </div>
-          </footer>
+        </footer>
     </div>
     <script type="text/javascript">
         window.onload = function () {
