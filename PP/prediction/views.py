@@ -43,9 +43,13 @@ def prediction(request):
 
         if HistoryOfBacklogs > 0:
             backans = "WE recommend you to clear all the backlogs "
+        else:
+            backans = ""
 
         if Internships < 2:
             Internshipsans = "WE recommend you to increase number of internships"
+        else:
+            Internshipsans = ""
 
         # if CGPA < 6.0:
         #     cgpaans = (
