@@ -34,7 +34,6 @@ body{
 
 
 #skills-section {
-    color: red; /* Sets the text color to red */
     display: flex; /* Makes the span elements behave as flex items */
     flex-direction: row; /* Arranges the flex items in a row */
     justify-content: left; /* Aligns the flex items to the left within the flex container */
@@ -45,7 +44,7 @@ body{
     flex-wrap: wrap; /* Allows flex items to wrap to the next line if there's not enough space */
     row-gap: 6px; /* Adds vertical gap between flex items */
     column-gap: 8px; /* Adds horizontal gap between flex items */
- 
+
 }
 
 
@@ -74,3 +73,4 @@ span .skill
     /* border: 3px solid red; */
     text-align: center;
 }
+

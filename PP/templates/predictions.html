@@ -16,7 +16,12 @@
     <!-- greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-
+    <style>
+        .recommendations {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -212,9 +217,14 @@
 
                     <h1 style="color: white;font-size: 80px; margin-top:10px;">Result of prediction is {{result}}
                     </h1>
-                    <h2>{{backans}}</h2><br>
-                    <h2>{{internshipsans}}</h2><br>
-                    <h2>{{cgpans}}</h2>
+                    <div class="recommendations">
+                        <h2>{{backans}}</h2><br>
+
+                        <h2>{{internshipsans}}</h2><br>
+
+                        <h2>{{cgpaans}}</h2>
+                    </div>
+
                     {%endif%}
         </section>
 

@@ -51,10 +51,12 @@ def prediction(request):
         else:
             Internshipsans = ""
 
-        # if CGPA < 6.0:
-        #     cgpaans = (
-        #         "WE recommend you to try increase your CGPA for campus opportunities "
-        #     )
+        if CGPA < 7:
+            cgpaans = (
+                "WE recommend you to try increase your CGPA for campus opportunities "
+            )
+        else:
+            cgpaans = ""
 
         return render(
             request,
@@ -64,7 +66,7 @@ def prediction(request):
                 "ans": y_pred,
                 "backans": backans,
                 "internshipsans": Internshipsans,
-                # "cgpans": cgpaans,
+                "cgpaans": cgpaans,
             },
         )
 

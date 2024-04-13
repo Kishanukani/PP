@@ -5,18 +5,225 @@
   <meta charset="UTF-8" />
   <title>Resume Analysis</title>
   {% load static %}
-  <link rel="stylesheet" href="{% static '/resumeanalysis.css' %}" />
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  {% load static %}
-  <link rel="stylesheet" href="{% static '/final.css' %}" />
   <link
     href="https://fonts.googleapis.com/css2?family=Kaushan+Script&amp;family=Oxygen:wght@300;400;700&amp;family=Poppins:wght@100&amp;display=swap"
     rel="stylesheet">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <link rel="stylesheet" href="{% static '/resumeanalysis.css' %}" />
+  <style>
+    h2 {
+      font-size: inherit;
+    }
+
+    #skills-section {
+      color: beige;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 5px 3px;
+      margin-top: 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    #skills-section span {
+      color: lightblue;
+      border: 0.5px solid;
+      /* border: ; */
+      border-radius: 1px;
+      padding: 1px 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    #skills-section:hover {
+      transform: scale(1.1);
+
+      border: 3px solid black;
+      background-color: #111827;
+    }
+
+    #skills-section span:hover {
+      transform: scale(1.1);
+      background-color: lightblue;
+      color: black;
+    }
+
+
+    .RAR {
+      color: bisque;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-top: 12px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+
+
+    .reco-field {
+      color: aqua;
+      font-size: 30px;
+    }
+
+    .recomendedskills {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      width: auto;
+      padding: 5px 3px;
+      margin: 0px;
+      flex-wrap: wrap;
+      row-gap: 6px;
+      column-gap: 8px;
+      border: 1px solid;
+      border-radius: 5px;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .RAR :hover {
+      transform: scale(1.1);
+    }
+
+    .RAR h1 {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .RAR h1:hover {
+      transform: scale(1.1);
+
+      border: 3px solid black;
+      background-color: #111827;
+
+    }
+
+    #recommendedfield {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    #recommendedfield :hover {
+      transform: scale(1.1);
+
+      border: 3px solid black;
+      background-color: #111827;
+
+    }
+
+    .rs {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .rs:hover {
+      transform: scale(1.1);
+
+      border: 3px solid black;
+      background-color: #111827;
+    }
+
+    .recomendedskills span {
+      color: greenyellow;
+      border: 0.5px solid;
+      /* border: ; */
+      border-radius: 1px;
+      padding: 1px 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .recomendedskills span:hover {
+      transform: scale(1.1);
+      background-color: greenyellow;
+      color: black;
+    }
+
+
+    .rc {
+      margin-top: 12px;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 1px 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .rc:hover {
+      transform: scale(1.1);
+
+      border: 3px solid black;
+      background-color: #111827;
+    }
+
+    .rc p {
+      padding: 1px 5px;
+    }
+
+    .recommendedcources {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      width: auto;
+      flex-wrap: wrap;
+      row-gap: 6px;
+      column-gap: 8px;
+      /* border: 1px solid; */
+      border-radius: 5px;
+      margin-bottom: 12px;
+      color: pink;
+      /* border: 0.5px solid; */
+      border-radius: 1px;
+      padding: 1px 5px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .recommendedcources span {
+      border: 0.5px solid;
+      /* border: ; */
+      border-radius: 1px;
+      padding: 1px 5px;
+      /* margin: 2px; */
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .recommendedcources span:hover {
+      transform: scale(1.1);
+      background-color: pink;
+      color: black;
+      text-decoration: underline;
+    }
+
+    .resumetips {
+      padding: 1px 5px;
+      border: 0.5px solid;
+      margin-top: 12px;
+      border-radius: 5px;
+
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+    }
+
+    .resumetips:hover {
+      transform: scale(1.1);
+      /* border-color: ; */
+      border: 3px solid black;
+      background-color: #111827;
+    }
+
+    .child3 {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
-<body style="color: black;">
+<!-- background-color: ; -->
+
+<body style="color: white; background-color:#111827 ;">
   <header class="text-gray-400 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="{% url 'landingpage' %}">
@@ -43,15 +250,13 @@
     <div class="child2">
       <!-- <h1>Resume Analysis</h1>
       <h2>Hello {{ resume_data.name }}</h2> -->
-
-      Your Current Skills are:
+      <!-- Skills Section -->
       <div id="skills-section">
+        Your Current Skills are:
         {% for skill in resume_data.skills %}
         <span class="skill">{{ skill }}</span>
         {% endfor %}
       </div>
-
-      <p>See our skills recommendation below:</p>
 
       <!-- {% for i in resume_data.skills %}
       {% if i.lower in ds_keyword %}
@@ -98,15 +303,26 @@
       </ul>
       {% endif %}
       {% endfor %} -->
+      <!-- Resume analysis Results -->
+      <div class="RAR">
+        <h1 style="font-size: 35px; color: orange;">Resume Analysis Results:</h1>
 
-      <h1>Resume Analysis Results</h1>
-      <h2>Recommended Field:Our analysis Says You are Looking for jobs in {{ reco_field }}</h2>
-      <h3>Recommended Skills For {{reco_field}}:</h3>
-      <ul>
-        {% for skill in recommended_skills %}
-        <li>{{ skill }}</li>
-        {% endfor %}
-      </ul>
+        <h2 id="recommendedfield" style="font-size: 22px;">Recommended Field: <br>
+          Our analysis says you are looking for jobs
+          in
+          <span class=" reco-field">{{reco_field}}</span>
+        </h2>
+        <h3 style="font-size: 18px;" class="rs">Recommended Skills For <span class="reco-field">{{reco_field}}:</span>
+        </h3>
+        <!-- <ul> -->
+        <div class="recomendedskills">
+          {% for skill in recommended_skills %}
+          <!-- <li>{{ skill }}</li><span class="skill">{{ skill }}</span> -->
+          <span class="skill">{{ skill }}</span>
+          {% endfor %}
+        </div>
+        <!-- </ul> -->
+      </div>
       <!-- <h1>Candidate Level</h1> -->
       <!-- <h4>your experience is {{exp}}</h4> -->
 
@@ -125,43 +341,37 @@
     You are at {{ cand_level }} level!
   </h4>
   {% endif %} -->
+      <!-- Recommended Cources -->
+      <h3></h3>
+      <div class="rc">
+        <p>Recommended Courses for{{reco_field}}:</p>
+        <div class="recommendedcources">
+          <!-- <ul> -->
+          {% for course in rec_course %}
+          <span><a href="{{ course.link }}" target="_blank">{{ course.name }}</a></span>
+          {% endfor %}
+          <!-- </ul> -->
+        </div>
+      </div>
+      <div class="resumetips">
+        {% if resume_tips %}
+        <!-- <h3>Resume Tips:</h3> -->
+        <h3>Resume Tips & Ideas💡</h3>
 
+        <ul>
+          {% for tip in resume_tips %}
+          <li style="color: {{ tip.color }}">{{ tip.message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <h3>Resume Score📝</h3>
 
-      <h3>Recommended Course:</h3>
-      <ul>
-        {% for course in rec_course %}
-        <li><a href="{{ course.link }}" target="_blank">{{ course.name }}</a></li>
-        {% endfor %}
-      </ul>
-
-      <h3>Resume Tips & Ideas💡</h3>
-      <ul>
-        {% for tip in tips %}
-        <li style="color: {{ tip.color }};">{{ tip.message }}</li>
-        {% endfor %}
-      </ul>
-
-      <h3>Resume Score📝</h3>
-      <style>
-        .stProgress>div>div>div>div {
-          background-color: #d73b5c;
-        }
-      </style>
-
-      <h4>Your Resume Writing Score: {{ resume_score }}</h4>
-      <p>
-        Note: This score is calculated based on the content that you have in your
-        Resume.
-      </p>
-
-      {% if resume_tips %}
-      <h3>Resume Tips:</h3>
-      <ul>
-        {% for tip in resume_tips %}
-        <li style="color: {{ tip.color }}">{{ tip.message }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
+        <h4>Your Resume Writing Score: {{ resume_score }}</h4>
+        <p>
+          Note: This score is calculated based on the content that you have in your
+          Resume.
+        </p>
+      </div>
     </div>
   </div>
   <br>
@@ -174,16 +384,29 @@
       <h2>Bonus Video for Resume Writing Tips💡</h2>
 
       <!-- <h3>✅ </h3> -->
-      <iframe width="750" height="350" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="500" height="250" src="{{ resume_vid }}" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="interview_vid">
       <h2>Bonus Video for Interview Tips💡 </h2>
       <!-- <h3>✅</h3> -->
-      <iframe width="750" height="350" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="500" height="250" src="{{interview_vid }}" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
+        <span class="ml-3 text-xl">LogiPlacement</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
+        2024
+        @Logplacement —
+        <a href="#" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">BE
+          Comp</a>
+      </p>
 
+    </div>
+  </footer>
 
 </body>
 

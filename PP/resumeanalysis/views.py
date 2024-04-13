@@ -34,7 +34,7 @@ from .Courses import (
 
 def course_recommender(course_list):
     recommendations = []
-    no_of_reco = 5  # Default number of recommendations
+    no_of_reco = 10  # Default number of recommendations
     random.shuffle(course_list)
 
     for c_name, c_link in course_list[:no_of_reco]:
