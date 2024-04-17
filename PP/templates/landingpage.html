@@ -24,6 +24,7 @@
 
       <!-- greensock -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
 </head>
 
 <body>
@@ -37,9 +38,10 @@
             <div class="logo">LogiPlacement</div>
             <div class="nav">
                   <ul>
-                        <li>Home</li>
-                        <li><a style="color: white;" href="{% url 'login' %}">Login</a></li>
-                        <li id="services"><a style="color: white;" href="{% url 'signup' %}">Signup</a></li>
+                        <!-- <li>Home</li> -->
+                        <li id="services">Services</li>
+                        <li><a style="color: white; text-decoration: none;" href="{% url 'login' %}">Login</a></li>
+                        <li><a style="color: white; text-decoration: none;" href="{% url 'signup' %}">Signup</a></li>
                         <!-- <li>Search</li> -->
                   </ul>
             </div>
@@ -59,7 +61,8 @@
                         prospects. Elevate your job applications with tailored sample resumes through our "Resume
                         Showcase" feature. Personalized learning paths in "Road Maps to Learn Various Courses" equip you
                         with essential skills.</p>
-                  <button id="exp"><a href="/landingpage/preloder.html">EXPLOREs</a></button>
+                  <button id="exp"><a style="color: black; text-decoration: none;"
+                              href="{% url 'signup' %}">Explore</a></button>
             </div>
             <div class="bottom-bar">
                   <div class="container">
@@ -67,18 +70,21 @@
                         <div class="row">
                               <div class="col-lg-4">
                                     <h6>Placement Prediction</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore
-                                          repellendus necessitatibus ipsa!</p>
+                                    <p>Use our ML-driven prediction tool to assess your chances of landing a job based
+                                          on your academic and professional profile. Get personalized recommendations
+                                          for improvement.</p>
                               </div>
                               <div class="col-lg-4">
                                     <h6>Resume</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore
-                                          repellendus necessitatibus ipsa!</p>
+                                    <p> Share and access a collection of resumes from successful candidates across
+                                          different fields. Find inspiration and tips to enhance your own resume and
+                                          increase your chances of success.</p>
                               </div>
                               <div class="col-lg-4">
                                     <h6>Learnings</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore
-                                          repellendus necessitatibus ipsa!</p>
+                                    <p>Explore comprehensive guides and learning paths for various technologies and
+                                          skills, from beginner to advanced levels. Enhance your expertise and stay
+                                          ahead in your career.</p>
                               </div>
                         </div>
                   </div>
