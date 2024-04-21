@@ -36,7 +36,7 @@ def prediction(request):
         # Perform logic based on prediction
         if y_pred >= 1 and HistoryOfBacklogs == 0 and Internships >= 2:
             result = "Placed"
-        elif 0.6 < y_pred < 1 and HistoryOfBacklogs == 0 and Internships > 0:
+        elif 0.6 < y_pred < 1 and HistoryOfBacklogs == 0 or Internships > 0:
             result = "Maybe Placed"
         else:
             result = "Not Placed"

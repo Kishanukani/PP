@@ -64,7 +64,7 @@ def show_pdf(file_path):
 #     elif no_of_pages >= 3:
 #         return "Experienced"
 
-
+# this is of no use
 # def experiences(total_experience):
 #     return total_experience
 
