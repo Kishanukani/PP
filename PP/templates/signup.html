@@ -23,7 +23,7 @@
                 <input type='text' id="username" name='username' placeholder="User name" request=''>
                 <input type='email' id="email" name='email' placeholder="Email" request=''>
                 <input type='Password' id="password1" name='password1' placeholder="Password" request=''>
-                <input type="password"id="password2" name="password2" placeholder="Confirm Password" required>
+                <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
                 <button>Sign up</button>
             </form>
         </div>
@@ -31,10 +31,11 @@
         <div class="login">
             <form method='post' action="">
                 {% csrf_token %}
-                <label for='chk' aria-hidden='true'>Login</label>
+                <label for='chk' aria-hidden='true'><a href="{% url 'login' %}"
+                        style="text-decoration: none;">Login</a></label>
                 <input type='text' name='username' placeholder="Username" request=''>
                 <input type='Password' name='pass' placeholder="Password" request=''>
-                <button>Login</button>
+                <button>Login </button>
             </form>
         </div>
     </div>

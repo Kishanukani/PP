@@ -152,8 +152,12 @@
                             <div class="relative mb-4">
                                 <label class="leading-7 text-sm text-gray-400">Age</label>
                                 <input type="number" id="age" name="Age" required placeholder="Age"
-                                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    min="0" max="50" oninput="validity.valid||(value='');">
+                                <!-- if dont work , remove this line -->
                             </div>
+
+
 
                             <div class="relative mb-4">
                                 <label class="leading-7 text-sm text-gray-400">Gender</label>
@@ -217,7 +221,7 @@
 
                     <h1 style="color: white;font-size: 80px; margin-top:10px;">Result of prediction is {{result}}
                     </h1>
-                    <div class="recommendations">
+                    <div class="recommendations" style="font-size: 20px;">
                         <h2>{{backans}}</h2><br>
 
                         <h2>{{internshipsans}}</h2><br>
